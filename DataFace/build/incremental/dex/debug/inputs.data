@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1369432937000 490914 3fe75433da602500cc71fcc1c46e5550291dd45d /opt/android-studio/sdk/extras/android/m2repository/com/android/support/support-v4/13.0.0/support-v4-13.0.0.jar
+1374700306000 458 f0ad9e1009ce3c45e9a7fa82bb09afd8a48bb7b3 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$dimen.class
+1374700306000 469 551320b0ca419c53cf125d37db9b0041c91d460c /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$string.class
+1374700306000 404 49122d1140f320e275d4370e894325c0541d5f28 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$drawable.class
+1374700306000 667 c2a108803e43254c5f6c6686b40e28593f5910a9 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R.class
+1374700306000 385 89697b3a846b278b2e1d26aa32e84f558f9d8539 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$menu.class
+1374700306000 343 ecf0a458c87afb94aee4c2cb48275d932a2f2e63 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/BuildConfig.class
+1374700306000 428 5d7dbe96042d86d02078288048e71da22a76354c /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$style.class
+1374700306000 815 982a53fe2ebc8ad11a471cc91525cb57be9e732b /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/MainActivity.class
+1374700306000 400 106cf1e438af36475aa54a877b0eafe3001dc8a5 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$layout.class
+1374700306000 390 8e603b0fad32eaf91cbd4c1cff30fcdc8b2d3733 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$id.class
+1374700306000 337 65b112888feee3de09101cf8043dacffdf92e229 /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/classes/debug/com/beta/dataface/R$attr.class
