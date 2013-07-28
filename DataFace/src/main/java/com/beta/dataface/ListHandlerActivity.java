@@ -1,5 +1,6 @@
 package com.beta.dataface;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by trentonknight on 7/27/13.
  */
-public class ListHandlerActivity extends ListActivity{
+public class ListHandlerActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
