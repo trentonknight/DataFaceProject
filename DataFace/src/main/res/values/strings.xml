@@ -3,6 +3,7 @@
 
     <string name="app_name">DataFace</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello List!</string>
+    <string name="title_activity_list_handler">ListHandlerActivity</string>
 
 </resources>
