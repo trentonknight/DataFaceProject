@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,23 +61,19 @@ public class DatabaseH extends SQLiteOpenHelper{
 
         return con;
     }
-    public List<LittleConstructor> getAllTheCols(){
-        List<LittleConstructor> objectL = new ArrayList<LittleConstructor>();
-        String selectQuery = "SELECT * FROM " + TABLE_NAME;
+
+    public Cursor getAllColumns(){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-
-        if(cursor.moveToFirst()){
-            do{
-                LittleConstructor con = new LittleConstructor();
-                con.setID(Integer.parseInt(cursor.getString(0)));
-                con.setOB(con.getOB());
-                con.setContent(con.getContent());
-                objectL.add(con);
-            }while(cursor.moveToNext());
-        }
-
-        return objectL;
-
+        return db.query(TABLE_NAME, new String[] {KEY_ID, KEY_OBNAME, KEY_CONTENT},null,null,null,null,null);
     }
+
+    public List<String> DisplayObject(Cursor c){
+    List<String> array = new ArrayList<String>();
+        while(c.moveToNext()){
+            String uname = c.getString(c.getColumnIndex(KEY_OBNAME));
+            array.add(uname);
+        }
+        return array;
+    }
+
 }

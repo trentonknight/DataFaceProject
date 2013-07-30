@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
         db.addObject(new LittleConstructor("Animals","snake"));
         db.addObject(new LittleConstructor("Humans","Brian"));
         db.addObject(new LittleConstructor("Vehicles", "Jeep"));
+        db.DisplayObject(db.getAllColumns());
 
     }
 

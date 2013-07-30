@@ -3,7 +3,9 @@ package com.beta.dataface;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,15 +25,13 @@ public class ListHandlerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_activity_main);
 
-        final ListView listview = (ListView) findViewById(R.id.listview);
-        String[] values = new String[] {"April", "Lyric", "Harley", "Blaine", "Baby"};
+        DatabaseH db = new DatabaseH(this);
 
-        final ArrayList<String> list = new ArrayList<String>();
-        for(int i = 0; i < values.length; ++i){
-            list.add(values[i]);
-        }
+
+
+        final ListView listview = (ListView) findViewById(R.id.listview);
         final GetArrayAdapter adapter = new GetArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
+                android.R.layout.simple_list_item_1, db.DisplayObject(db.getAllColumns()));
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -40,7 +40,8 @@ public class ListHandlerActivity extends Activity {
                 view.animate().setDuration(2000).alpha(0).withEndAction(new Runnable() {
                     @Override
                     public void run() {
-                        list.remove(item);
+                        //list.remove(item);
+                        //db.DisplayObject(db.getAllColumns());
                         adapter.notifyDataSetChanged();
                         view.setAlpha(1);
                     }
