@@ -5,8 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
+import android.provider.BaseColumns;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,28 +16,32 @@ import java.util.List;
  */
 public class DatabaseH extends SQLiteOpenHelper{
 
+
     private static final int DATABASE_VER = 1;
     private static final String DATABASE_NAME = "learning";
-    private static final String TABLE_NAME = "objects";
     //table columns
-    private static final String KEY_ID = "id";
-    private static final String KEY_OBNAME = "objectName";
-    private static final String KEY_CONTENT = "content";
 
+ public static final class KEYS implements BaseColumns{
+    private KEYS() {}
+    private static final String TABLE_NAME = "objects";
+    public static final String KEY_ID = "id";
+    public static final String KEY_OBNAME = "objectName";
+    public static final String KEY_CONTENT = "content";
+ }
     public DatabaseH(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VER);
     }
     //Creating Tables
     @Override
     public void onCreate(SQLiteDatabase db){
-        String CREATE_OBJECT_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_OBNAME + " TEXT,"
-                + KEY_CONTENT + " TEXT" + ")";
+        String CREATE_OBJECT_TABLE = "CREATE TABLE " + KEYS.TABLE_NAME + "("
+                + KEYS.KEY_ID + " INTEGER PRIMARY KEY," + KEYS.KEY_ID + " TEXT,"
+                + KEYS.KEY_CONTENT+ " TEXT" + ")";
         db.execSQL(CREATE_OBJECT_TABLE);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        db.execSQL("DROP TABLE IF EXIST " + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXIST " + KEYS.TABLE_NAME);
         onCreate(db);
     }
     //add new contact
@@ -44,15 +49,15 @@ public class DatabaseH extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_OBNAME, constructObject.getOB());//object name
-        values.put(KEY_CONTENT, constructObject.getContent());//inside content for object
+        values.put(KEYS.KEY_OBNAME, constructObject.getOB());//object name
+        values.put(KEYS.KEY_CONTENT, constructObject.getContent());//inside content for object
         //insert row
-        db.insert(TABLE_NAME, null, values);
+        db.insert(KEYS.TABLE_NAME, null, values);
         db.close();
     }
     LittleConstructor getSingleObject(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME, new String[] {KEY_ID, KEY_OBNAME,KEY_CONTENT}, KEY_ID + "=?",
+        Cursor cursor = db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME,KEYS.KEY_CONTENT}, KEYS.KEY_ID + "=?",
                 new String[] { String.valueOf(id)}, null, null, null, null);
         if(cursor != null)
             cursor.moveToFirst();
@@ -64,16 +69,32 @@ public class DatabaseH extends SQLiteOpenHelper{
 
     public Cursor getAllColumns(){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.query(TABLE_NAME, new String[] {KEY_ID, KEY_OBNAME, KEY_CONTENT},null,null,null,null,null);
+        return db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME, KEYS.KEY_CONTENT},null,null,null,null,null);
     }
 
-    public List<String> DisplayObject(Cursor c){
+    public List<String> DisplayObjectID(Cursor c){
     List<String> array = new ArrayList<String>();
         while(c.moveToNext()){
-            String uname = c.getString(c.getColumnIndex(KEY_OBNAME));
+            String uname = c.getString(c.getColumnIndex(KEYS.KEY_ID));
             array.add(uname);
         }
         return array;
+    }
+    public List<String> DisplayObjectName(Cursor c){
+        List<String> array = new ArrayList<String>();
+        while(c.moveToNext()){
+            String uname = c.getString(c.getColumnIndex(KEYS.KEY_OBNAME));
+            array.add(uname);
+        }
+        return array;
+    }
+    public List<String> DisplayObjectContent(Cursor c){
+        List<String> array = new ArrayList<String>();
+        while(c.moveToNext()){
+            String uname = c.getString(c.getColumnIndex(KEYS.KEY_CONTENT));
+            array.add(uname);
+    }
+       return array;
     }
 
 }

@@ -9,4 +9,4 @@
               android:layout_height="wrap_content"
               tools:listitem="@android:layout/simple_expandable_list_item_1"/>
 
-</FrameLayout>
+</FrameLayout><!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_activity_main.xml -->

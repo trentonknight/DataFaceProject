@@ -10,6 +10,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:label="@string/title_activity_list_handler" android:name="com.beta.dataface.ListHandlerActivity" android:parentActivityName="com.beta.dataface.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.MainActivity"/>
+        </activity>
+        <activity android:label="@string/title_activity_add_new_object" android:name="com.beta.dataface.AddNewObject" android:parentActivityName="com.beta.dataface.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>

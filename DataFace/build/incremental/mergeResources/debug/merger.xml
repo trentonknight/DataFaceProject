@@ -9,6 +9,16 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="add_new_object"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/add_new_object.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="list_handler"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_handler.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
@@ -59,9 +69,21 @@
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
+                <string name="title_activity_list_handler" >ListHandlerActivity
+                </string>
                 <string name="app_name" >DataFace
                 </string>
+                <string name="ob_name" >Object Name
+                </string>
+                <string name="title_activity_add_new_object" >AddNewObjectActivity
+                </string>
+                <string name="ob_con" >Contents
+                </string>
+                <string name="ob_send" >Submit new Object
+                </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="button_send" >Go To List
                 </string>
             </file>
             <file
@@ -74,6 +96,16 @@
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
                 type="drawable" />
+            <file
+                name="list_activity_main"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="add_new_object"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/add_new_object.xml"
+                qualifiers=""
+                type="layout" />
             <file
                 name="activity_main"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml"
@@ -104,6 +136,11 @@
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
+            <file
+                name="list_child"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_child.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/res/rs/debug" />
     </dataSet>
