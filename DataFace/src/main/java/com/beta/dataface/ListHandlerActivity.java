@@ -3,6 +3,7 @@ package com.beta.dataface;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -21,11 +22,12 @@ import java.util.List;
 /**
  * Created by trentonknight on 7/27/13.
  */
-public class ListHandlerActivity extends Activity {
+public class ListHandlerActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.list_activity_main);
 
         DatabaseH db = new DatabaseH(this);
@@ -40,10 +42,9 @@ public class ListHandlerActivity extends Activity {
                 view.animate().setDuration(2000).alpha(0).withEndAction(new Runnable() {
                     @Override
                     public void run() {
-                        //list.remove(item);
-                        //db.DisplayObject(db.getAllColumns());
                         adapter.notifyDataSetChanged();
                         view.setAlpha(1);
+
                     }
                 });
             }
@@ -61,7 +62,18 @@ public class ListHandlerActivity extends Activity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     protected void onStop(){
         super.onStop();
     }
+
 }

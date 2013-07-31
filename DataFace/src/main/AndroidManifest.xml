@@ -24,18 +24,19 @@
         </activity>
         <activity
             android:name="com.beta.dataface.ListHandlerActivity"
-            android:label="@string/title_activity_list_handler" >
+            android:label="@string/title_activity_list_handler"
+            android:parentActivityName="com.beta.dataface.MainActivity"    >
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="MainActivity" />
+                    android:value="com.beta.dataface.MainActivity" />
         </activity>
         <activity
             android:name="com.beta.dataface.AddNewObject"
             android:label="@string/title_activity_add_new_object"
-            android:parentActivityName="MainActivity" >
+            android:parentActivityName="com.beta.dataface.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value="com.beta.dataface.MainActivity" />
         </activity>
     </application>
 

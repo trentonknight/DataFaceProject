@@ -15,15 +15,16 @@
             />
     <EditText android:id="@+id/obcontent_enter"
               android:layout_width="match_parent"
-              android:layout_height="400dp"
+              android:layout_height="200dp"
+              android:layout_below="@id/obname_enter"
               android:text="@string/ob_con"/>
 
   <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:onClick="activateList"
         android:text="@string/ob_send"
         android:id="@+id/object_name"
+        android:onClick="newDataIntoTable"
         android:layout_below="@+id/obcontent_enter"
         android:layout_alignLeft="@+id/obcontent_enter"/>
 
