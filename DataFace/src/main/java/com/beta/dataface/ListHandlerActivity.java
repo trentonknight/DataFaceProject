@@ -5,7 +5,10 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,12 +29,9 @@ public class ListHandlerActivity extends Activity {
         setContentView(R.layout.list_activity_main);
 
         DatabaseH db = new DatabaseH(this);
-
-
-
         final ListView listview = (ListView) findViewById(R.id.listview);
         final GetArrayAdapter adapter = new GetArrayAdapter(this,
-                android.R.layout.simple_list_item_1, db.DisplayObject(db.getAllColumns()));
+        android.R.layout.simple_list_item_1, db.DisplayObject(db.getAllColumns()));
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -59,5 +59,9 @@ public class ListHandlerActivity extends Activity {
             }
         }
 
+    }
+
+    protected void onStop(){
+        super.onStop();
     }
 }

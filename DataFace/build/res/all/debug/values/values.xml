@@ -8,6 +8,11 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">DataFace</string>
     <string name="button_send">Go To List</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ob_con">Contents</string>
+    <string name="ob_name">Object Name</string>
+    <string name="ob_send">Submit new Object</string>
+    <string name="title_activity_add_new_object">AddNewObjectActivity</string>
     <string name="title_activity_list_handler">ListHandlerActivity</string>
     <!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">

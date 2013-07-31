@@ -13,6 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
-        android:onClick="activateList"/>
+        android:onClick="activateList"
+        android:id="@+id/button"/>
 
-</RelativeLayout><!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml -->
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button"
+            android:text="@string/title_activity_add_new_object"
+            android:onClick="newObject"
+            android:id="@+id/buttonTwo"/>
+
+</RelativeLayout>
+<!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml -->

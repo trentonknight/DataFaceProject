@@ -15,13 +15,12 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DatabaseH db = new DatabaseH(this);
-        Log.d("Insert: ", "Inserting ..");
-        db.addObject(new LittleConstructor("Animals","snake"));
-        db.addObject(new LittleConstructor("Humans","Brian"));
-        db.addObject(new LittleConstructor("Vehicles", "Jeep"));
-        db.DisplayObject(db.getAllColumns());
 
+    }
+    public void newObject(View view){
+        Intent intent = new Intent(view.getContext(), AddNewObject.class);
+        startActivity(intent);
+        finish();
     }
 
     public void activateList(View view){
