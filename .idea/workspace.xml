@@ -15,11 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae68c84-ef3a-4d29-bb4f-a025c8a6578b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/res/layout/list_child.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseH.java" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseH.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListHandlerActivity.java" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListHandlerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/build/source/r/debug/com/beta/dataface/R.java" afterPath="$PROJECT_DIR$/DataFace/build/source/r/debug/com/beta/dataface/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/res/layout/list_activity_main.xml" afterPath="$PROJECT_DIR$/DataFace/src/main/res/layout/list_activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataFace.iws" />
@@ -125,7 +121,7 @@
       <file leaf-file-name="DatabaseH.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="39" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0" vertical-offset="1057" max-vertical-offset="1908">
+            <state line="32" column="4" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1908">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2823#2831#0" expanded="true" />
@@ -139,14 +135,14 @@
       <file leaf-file-name="ListHandlerActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListHandlerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="8" selection-start="2243" selection-end="2243" vertical-scroll-proportion="1.307605" vertical-offset="0" max-vertical-offset="1422">
+            <state line="35" column="8" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.5981873" vertical-offset="234" max-vertical-offset="1566">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1037#1599#0" expanded="true" />
-                <element signature="e#1348#1573#0" expanded="true" />
-                <element signature="e#1554#1555#0" expanded="true" />
-                <element signature="e#1588#1589#0" expanded="true" />
-                <element signature="e#1723#1740#0" expanded="true" />
+                <element signature="e#1412#1974#0" expanded="true" />
+                <element signature="e#1723#1948#0" expanded="true" />
+                <element signature="e#1929#1930#0" expanded="true" />
+                <element signature="e#1963#1964#0" expanded="true" />
+                <element signature="e#2098#2115#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -727,8 +723,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.37582418" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18356457" sideWeight="0.6703297" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24065934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18356457" sideWeight="0.75934064" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24065934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -912,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="39" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0" vertical-offset="1057" max-vertical-offset="1908">
+        <state line="32" column="4" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1908">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2823#2831#0" expanded="true" />
@@ -924,14 +920,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListHandlerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="8" selection-start="2243" selection-end="2243" vertical-scroll-proportion="1.307605" vertical-offset="0" max-vertical-offset="1422">
+        <state line="35" column="8" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.5981873" vertical-offset="234" max-vertical-offset="1566">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1037#1599#0" expanded="true" />
-            <element signature="e#1348#1573#0" expanded="true" />
-            <element signature="e#1554#1555#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#1723#1740#0" expanded="true" />
+            <element signature="e#1412#1974#0" expanded="true" />
+            <element signature="e#1723#1948#0" expanded="true" />
+            <element signature="e#1929#1930#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+            <element signature="e#2098#2115#0" expanded="true" />
           </folding>
         </state>
       </provider>
