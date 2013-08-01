@@ -1,5 +1,7 @@
 package com.beta.dataface;
 
+import android.*;
+import android.R;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -7,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public class DatabaseH extends SQLiteOpenHelper{
 
 
-    private static final int DATABASE_VER = 1;
+    private static final int DATABASE_VER = 2;
     private static final String DATABASE_NAME = "learning";
     //table columns
 
@@ -34,8 +35,9 @@ public class DatabaseH extends SQLiteOpenHelper{
     //Creating Tables
     @Override
     public void onCreate(SQLiteDatabase db){
+        db.execSQL("DROP TABLE IF EXISTS " + KEYS.TABLE_NAME);
         String CREATE_OBJECT_TABLE = "CREATE TABLE " + KEYS.TABLE_NAME + "("
-                + KEYS.KEY_ID + " INTEGER PRIMARY KEY," + KEYS.KEY_ID + " TEXT,"
+                + KEYS.KEY_ID + " INTEGER PRIMARY KEY," + KEYS.KEY_OBNAME + " TEXT,"
                 + KEYS.KEY_CONTENT+ " TEXT" + ")";
         db.execSQL(CREATE_OBJECT_TABLE);
     }
@@ -44,6 +46,7 @@ public class DatabaseH extends SQLiteOpenHelper{
         db.execSQL("DROP TABLE IF EXISTS " + KEYS.TABLE_NAME);
         onCreate(db);
     }
+
     //add new contact
     public void addObject(LittleConstructor constructObject){
         SQLiteDatabase db = this.getWritableDatabase();

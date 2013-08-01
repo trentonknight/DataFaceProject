@@ -29,14 +29,6 @@ public class ListHandlerActivity extends Activity{
         setContentView(R.layout.list_activity_main);
 
         DatabaseH db = new DatabaseH(this);
-        LittleConstructor singleObject = db.getSingleObject(2);
-        String content = singleObject.getContent().toString();
-        //String content = "Test Test";
-        Intent intent = new Intent(this, ListChildActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("content",content);
-        intent.putExtras(bundle);
-        startActivity(intent);
 
 
 
@@ -53,6 +45,7 @@ public class ListHandlerActivity extends Activity{
                     public void run() {
                         adapter.notifyDataSetChanged();
                         view.setAlpha(1);
+                        passDataToTheChild(1);
 
                     }
                 });
@@ -60,6 +53,18 @@ public class ListHandlerActivity extends Activity{
 
 
         });
+    }
+    public void passDataToTheChild(int position){
+        DatabaseH db = new DatabaseH(this);
+        LittleConstructor singleObject = db.getSingleObject(position);
+        String content = singleObject.getContent().toString();
+        //String content = "Test Test";
+        Intent intent = new Intent(this, ListChildActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("content",content);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
     }
 
     private class GetArrayAdapter extends ArrayAdapter<String>{

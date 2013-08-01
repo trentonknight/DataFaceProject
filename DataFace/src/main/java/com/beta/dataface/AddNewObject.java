@@ -22,6 +22,7 @@ public class AddNewObject extends Activity {
 
     public void newDataIntoTable(View view){
          DatabaseH data = new DatabaseH(this);
+
          EditText objectName = (EditText) findViewById(R.id.obname_enter);
          EditText objectContents = (EditText) findViewById(R.id.obcontent_enter);
          String on = objectName.getText().toString();
