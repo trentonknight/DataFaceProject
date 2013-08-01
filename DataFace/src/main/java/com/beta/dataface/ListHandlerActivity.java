@@ -36,18 +36,16 @@ public class ListHandlerActivity extends Activity{
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, final View view, int i, long l) {
-                final String item = (String) adapterView.getItemAtPosition(i);
-                        passDataToTheChild(i + 1);
+                        passDataToTheChild(i);
             }
         });
     }
     public void passDataToTheChild(int position){
-        DatabaseH db = new DatabaseH(this);
-        LittleConstructor singleObject = db.getSingleObject(position);
-        String content = singleObject.getContent().toString();
+
         Intent intent = new Intent(this, ListChildActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("content",content);
+        //bundle.putString("content",content);
+        bundle.putInt("position", position);
         intent.putExtras(bundle);
         startActivity(intent);
 

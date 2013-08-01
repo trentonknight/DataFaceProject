@@ -1,10 +1,8 @@
 package com.beta.dataface;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
@@ -25,14 +23,21 @@ public class ListChildActivity extends Activity {
         // Show the Up button in the action bar.
         setupActionBar();
 
+        DatabaseH db = new DatabaseH(this);
+
         Bundle bundle = getIntent().getExtras();
-        String newContent = bundle.getString("content");
-        Toast.makeText(getApplicationContext(), newContent, Toast.LENGTH_LONG).show();
-        Log.i("newContent", newContent);
+        int newContent = bundle.getInt("position");
+        newContent++;
+        LittleConstructor singleObject = db.getSingleObject(newContent);
+
+        int id_number = singleObject.getID();
+        String OB_name = singleObject.getOB();
+        String content_now = singleObject.getContent();
 
         TextView tv = (TextView)findViewById(R.id.textView);
-        tv.setText(newContent);
-
+        TextView tv_two = (TextView) findViewById(R.id.textView2);
+        tv.setText(content_now);
+        tv_two.setText(OB_name);
 
     }
 
