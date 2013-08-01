@@ -1,7 +1,7 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1375355967000 648 b9f0b67dd77744d1888724105a702f9ec665e65c /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/child_activity.xml
+1375383100000 1096 48f2b527365ff67cde38fa2ee76186d14e8d95cc /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/child_activity.xml
 1375352039000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/main.xml
 1375352039000 1122 f57a1a84fbc79c7be6cc0ce900caebb9ea899a8e /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml
 1375352039000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_handler.xml

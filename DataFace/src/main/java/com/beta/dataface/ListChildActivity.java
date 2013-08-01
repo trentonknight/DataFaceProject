@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ListChildActivity extends Activity {
@@ -16,6 +18,9 @@ public class ListChildActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.child_activity);
         // Show the Up button in the action bar.
         setupActionBar();
@@ -23,7 +28,12 @@ public class ListChildActivity extends Activity {
         Bundle bundle = getIntent().getExtras();
         String newContent = bundle.getString("content");
         Toast.makeText(getApplicationContext(), newContent, Toast.LENGTH_LONG).show();
-        Log.i("newContent",newContent);
+        Log.i("newContent", newContent);
+
+        TextView tv = (TextView)findViewById(R.id.textView);
+        tv.setText(newContent);
+
+
     }
 
 

@@ -1,7 +1,5 @@
 package com.beta.dataface;
 
-import android.*;
-import android.R;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

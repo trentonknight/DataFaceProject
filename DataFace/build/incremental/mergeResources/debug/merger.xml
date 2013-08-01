@@ -76,19 +76,19 @@
                 </string>
                 <string name="title_activity_list_handler" >ListHandlerActivity
                 </string>
-                <string name="title_activity_list_child" >ListChildActivity
+                <string name="app_name" >DataFace
                 </string>
                 <string name="ob_name" >Object Name
                 </string>
-                <string name="app_name" >DataFace
+                <string name="title_activity_list_child" >ListChildActivity
                 </string>
                 <string name="title_activity_add_new_object" >AddNewObjectActivity
                 </string>
                 <string name="ob_con" >Contents
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="ob_send" >Submit new Object
+                </string>
+                <string name="hello_world" >Hello world!
                 </string>
                 <string name="child" >Child Activity
                 </string>
