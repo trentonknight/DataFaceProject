@@ -10,5 +10,7 @@
     <string name="title_activity_list_handler">ListHandlerActivity</string>
     <string name="title_activity_add_new_object">AddNewObjectActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="child">Child Activity</string>
+    <string name="title_activity_list_child">ListChildActivity</string>
 
 </resources>

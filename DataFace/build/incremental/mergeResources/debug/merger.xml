@@ -9,6 +9,11 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="list_child"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_child.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="add_new_object"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/add_new_object.xml"
                 qualifiers=""
@@ -71,17 +76,21 @@
                 </string>
                 <string name="title_activity_list_handler" >ListHandlerActivity
                 </string>
-                <string name="app_name" >DataFace
+                <string name="title_activity_list_child" >ListChildActivity
                 </string>
                 <string name="ob_name" >Object Name
+                </string>
+                <string name="app_name" >DataFace
                 </string>
                 <string name="title_activity_add_new_object" >AddNewObjectActivity
                 </string>
                 <string name="ob_con" >Contents
                 </string>
+                <string name="hello_world" >Hello world!
+                </string>
                 <string name="ob_send" >Submit new Object
                 </string>
-                <string name="hello_world" >Hello world!
+                <string name="child" >Child Activity
                 </string>
                 <string name="button_send" >Go To List
                 </string>
@@ -97,8 +106,18 @@
                 qualifiers="mdpi"
                 type="drawable" />
             <file
+                name="list_child"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_child.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="list_activity_main"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="child_activity"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/child_activity.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -136,11 +155,6 @@
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
-            <file
-                name="list_child"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_child.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/res/rs/debug" />
     </dataSet>

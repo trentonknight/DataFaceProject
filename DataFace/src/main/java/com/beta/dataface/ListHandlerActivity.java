@@ -2,14 +2,16 @@ package com.beta.dataface;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,11 +21,6 @@ import java.util.List;
  */
 public class ListHandlerActivity extends Activity{
 
-    SimpleCursorAdapter mAdapter;
-    static final String[] PROJECTION = new String[] {DatabaseH.KEYS.KEY_ID,
-            DatabaseH.KEYS.KEY_OBNAME, DatabaseH.KEYS.KEY_CONTENT};
-    static final String SELECTION = "((" + DatabaseH.KEYS.KEY_OBNAME + " NOTNULL) AND (" +
-            DatabaseH.KEYS.KEY_OBNAME + " != '' ))";
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -32,10 +29,20 @@ public class ListHandlerActivity extends Activity{
         setContentView(R.layout.list_activity_main);
 
         DatabaseH db = new DatabaseH(this);
+        LittleConstructor singleObject = db.getSingleObject(2);
+        String content = singleObject.getContent().toString();
+        //String content = "Test Test";
+        Intent intent = new Intent(this, ListChildActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("content",content);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
+
+
         final ListView listview = (ListView) findViewById(R.id.listview);
-        
         final GetArrayAdapter adapter = new GetArrayAdapter(this,
-        android.R.layout.simple_list_item_1, db.DisplayObjectID(db.getAllColumns()));
+        android.R.layout.simple_list_item_1, db.DisplayObjectName(db.getAllColumns()));
         listview.setAdapter(adapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -50,6 +57,8 @@ public class ListHandlerActivity extends Activity{
                     }
                 });
             }
+
+
         });
     }
 
