@@ -31,7 +31,6 @@ public class ListHandlerActivity extends Activity{
         DatabaseH db = new DatabaseH(this);
 
 
-
         final ListView listview = (ListView) findViewById(R.id.listview);
         final GetArrayAdapter adapter = new GetArrayAdapter(this,
         android.R.layout.simple_list_item_1, db.DisplayObjectName(db.getAllColumns()));
@@ -40,18 +39,8 @@ public class ListHandlerActivity extends Activity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, final View view, int i, long l) {
                 final String item = (String) adapterView.getItemAtPosition(i);
-                view.animate().setDuration(2000).alpha(0).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        adapter.notifyDataSetChanged();
-                        view.setAlpha(1);
-                        passDataToTheChild(1);
-
-                    }
-                });
+                        passDataToTheChild(i + 1);
             }
-
-
         });
     }
     public void passDataToTheChild(int position){
