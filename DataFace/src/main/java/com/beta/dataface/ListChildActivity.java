@@ -1,13 +1,15 @@
 package com.beta.dataface;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ListChildActivity extends Activity {
 
@@ -30,7 +32,7 @@ public class ListChildActivity extends Activity {
         newContent++;
         LittleConstructor singleObject = db.getSingleObject(newContent);
 
-        int id_number = singleObject.getID();
+        //int id_number = singleObject.getID(); save for rainy day
         String OB_name = singleObject.getOB();
         String content_now = singleObject.getContent();
 
@@ -38,6 +40,7 @@ public class ListChildActivity extends Activity {
         TextView tv_two = (TextView) findViewById(R.id.textView2);
         tv.setText(content_now);
         tv_two.setText(OB_name);
+
 
     }
 

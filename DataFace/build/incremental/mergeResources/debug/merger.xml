@@ -40,6 +40,11 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="content_discard"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-xhdpi/content_discard.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
@@ -76,19 +81,21 @@
                 </string>
                 <string name="title_activity_list_handler" >ListHandlerActivity
                 </string>
-                <string name="app_name" >DataFace
+                <string name="title_activity_list_child" >Child
                 </string>
                 <string name="ob_name" >Object Name
                 </string>
-                <string name="title_activity_list_child" >ListChildActivity
+                <string name="app_name" >DataFace
                 </string>
                 <string name="title_activity_add_new_object" >AddNewObjectActivity
                 </string>
                 <string name="ob_con" >Contents
                 </string>
-                <string name="ob_send" >Submit new Object
+                <string name="content_discard" >Delete Object
                 </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="ob_send" >Submit new Object
                 </string>
                 <string name="child" >Child Activity
                 </string>
@@ -101,8 +108,18 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="content_discard"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-xxhdpi/content_discard.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_discard"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/content_discard.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
@@ -153,6 +170,11 @@
             <file
                 name="ic_launcher"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_discard"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/content_discard.png"
                 qualifiers="hdpi"
                 type="drawable" />
         </source>

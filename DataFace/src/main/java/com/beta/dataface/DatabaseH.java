@@ -73,14 +73,6 @@ public class DatabaseH extends SQLiteOpenHelper{
         return db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME, KEYS.KEY_CONTENT},null,null,null,null,null);
     }
 
-    public List<String> DisplayObjectID(Cursor c){
-    List<String> array = new ArrayList<String>();
-        while(c.moveToNext()){
-            String uname = c.getString(c.getColumnIndex(KEYS.KEY_ID));
-            array.add(uname);
-        }
-        return array;
-    }
     public List<String> DisplayObjectName(Cursor c){
         List<String> array = new ArrayList<String>();
         while(c.moveToNext()){
@@ -88,14 +80,6 @@ public class DatabaseH extends SQLiteOpenHelper{
             array.add(uname);
         }
         return array;
-    }
-    public List<String> DisplayObjectContent(Cursor c){
-        List<String> array = new ArrayList<String>();
-        while(c.moveToNext()){
-            String uname = c.getString(c.getColumnIndex(KEYS.KEY_CONTENT));
-            array.add(uname);
-    }
-       return array;
     }
 
 }

@@ -3,4 +3,11 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
+    <item android:id="@+id/content_discard"
+          android:icon="@drawable/content_discard"
+          android:title="@string/content_discard"
+          />
+
+
 </menu>
