@@ -41,10 +41,10 @@
         <activity
             android:name="com.beta.dataface.ListChildActivity"
             android:label="@string/title_activity_list_child"
-            android:parentActivityName="com.beta.dataface.ListHandlerActivity" >
+            android:parentActivityName="com.beta.dataface.ListViewLoader" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.beta.dataface.ListHandlerActivity" />
+                android:value="com.beta.dataface.ListViewLoader" />
         </activity>
     </application>
 

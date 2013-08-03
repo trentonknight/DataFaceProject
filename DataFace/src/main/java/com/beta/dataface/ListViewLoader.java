@@ -1,11 +1,12 @@
 package com.beta.dataface;
 
+
 import android.*;
 import android.R;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
@@ -42,7 +44,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
 
 
         String[] fromColumns = {DatabaseH.KEYS.KEY_OBNAME};
-        int[] toViews = {R.id.text1};
+        int[] toViews = {android.R.id.text1};
         DatabaseH db = new DatabaseH(this);
         db.onOpen(db.getReadableDatabase());
 
@@ -53,8 +55,12 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
                 data, fromColumns, toViews, 0);
         ListView listView = getListView();
         listView.setAdapter(mAdapter);
-
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+               passDataToTheChild(i);
+            }
+        });
     }
 
     // Called when a new Loader needs to be created
@@ -83,5 +89,16 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         // Do something when a list item is clicked
+
+    }
+     public void passDataToTheChild(int position){
+
+        Intent intent = new Intent(this, ListChildActivity.class);
+        Bundle bundle = new Bundle();
+        //bundle.putString("content",content);
+        bundle.putInt("position", position);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
     }
 }

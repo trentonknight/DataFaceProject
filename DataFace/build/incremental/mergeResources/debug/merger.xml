@@ -150,11 +150,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="easy_list"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/easy_list.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="activity_main"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml"
                 qualifiers=""
