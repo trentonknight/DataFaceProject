@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.beta.dataface.ListHandlerActivity"
+            android:name="com.beta.dataface.ListViewLoader"
             android:label="@string/title_activity_list_handler"
             android:parentActivityName="com.beta.dataface.MainActivity" >
             <meta-data

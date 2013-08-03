@@ -25,5 +25,7 @@
             android:onClick="newObject"
             android:id="@+id/buttonTwo"/>
 
+
+
 </RelativeLayout>
 <!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml -->

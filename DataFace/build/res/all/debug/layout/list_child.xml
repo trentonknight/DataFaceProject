@@ -12,7 +12,7 @@
 </TextView>
 
 <TextView
-        android:id="@+id/content"
+        android:id="@+id/content_ch"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 </TextView>

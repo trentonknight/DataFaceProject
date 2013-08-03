@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     }
 
     public void activateList(View view){
-        Intent intent = new Intent(view.getContext(), ListHandlerActivity.class);
+        Intent intent = new Intent(view.getContext(), ListViewLoader.class);
         startActivity(intent);
         finish();
     }

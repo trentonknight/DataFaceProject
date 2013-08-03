@@ -9,8 +9,8 @@
                 qualifiers=""
                 type="menu" />
             <file
-                name="list_child"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_child.xml"
+                name="list_child_menu"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_child_menu.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -21,6 +21,11 @@
             <file
                 name="list_handler"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_handler.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="easy_list"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/easy_list.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -79,27 +84,29 @@
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
-                <string name="title_activity_list_handler" >ListHandlerActivity
+                <string name="ob_name" >Object Name
                 </string>
                 <string name="title_activity_list_child" >Child
                 </string>
-                <string name="ob_name" >Object Name
+                <string name="title_activity_add_new_object" >Add Object
+                </string>
+                <string name="button_send" >Learning Objects
+                </string>
+                <string name="title_activity_list_handler" >Object List
                 </string>
                 <string name="app_name" >DataFace
-                </string>
-                <string name="title_activity_add_new_object" >AddNewObjectActivity
                 </string>
                 <string name="ob_con" >Contents
                 </string>
                 <string name="content_discard" >Delete Object
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="ob_send" >Submit new Object
                 </string>
-                <string name="child" >Child Activity
+                <string name="hello_world" >Hello world!
                 </string>
-                <string name="button_send" >Go To List
+                <string name="title_activity_easy_list" >EasyListActivity
+                </string>
+                <string name="child" >Child Activity
                 </string>
             </file>
             <file
@@ -143,6 +150,11 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="easy_list"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/easy_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_main"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/activity_main.xml"
                 qualifiers=""
@@ -164,9 +176,6 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
-            <file
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values-sw600dp/dimens.xml"
-                qualifiers="sw600dp" />
             <file
                 name="ic_launcher"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/ic_launcher.png"

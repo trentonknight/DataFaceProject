@@ -24,8 +24,8 @@ public class DatabaseH extends SQLiteOpenHelper{
 
  public static final class KEYS implements BaseColumns{
     private KEYS() {}
-    private static final String TABLE_NAME = "objects";
-    public static final String KEY_ID = "id";
+    public static final String TABLE_NAME = "objects";
+    public static final String KEY_ID = "_id";
     public static final String KEY_OBNAME = "objectName";
     public static final String KEY_CONTENT = "content";
  }
@@ -60,7 +60,7 @@ public class DatabaseH extends SQLiteOpenHelper{
     }
     LittleConstructor getSingleObject(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME,KEYS.KEY_CONTENT}, KEYS.KEY_ID + "=?",
+        Cursor cursor = db.query(KEYS.TABLE_NAME, new String[] {"_id " , KEYS.KEY_OBNAME,KEYS.KEY_CONTENT}, KEYS.KEY_ID + "=?",
                 new String[] { String.valueOf(id)}, null, null, null, null);
         if(cursor != null)
             cursor.getCount();//refreshes cursor, how I don't know just yet

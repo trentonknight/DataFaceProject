@@ -1,11 +1,13 @@
 package com.beta.dataface;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListChildActivity extends Activity {
@@ -46,7 +48,13 @@ private static int position = 0;
     public void delObjectColumn(){
         DatabaseH db = new DatabaseH(this);
          try{
+       final ListView listview = (ListView) findViewById(R.id.list);
        db.deleteTable(position);
+      // int current = listview.getSelectedItemPosition();
+       //listview.removeViewAt(current);
+       listview.removeAllViews();
+       ////Intent intent = new Intent(getApplicationContext(),ListHandlerActivity.class);
+       //Bundle bundle = new Bundle();
 
        } catch (IndexOutOfBoundsException e){
           Log.d("Index out of bound","IndexOutOfBoundsException");
