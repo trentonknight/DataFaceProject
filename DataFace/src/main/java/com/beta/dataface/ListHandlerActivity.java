@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CursorAdapter;
 import android.widget.ListView;
 
 import java.util.HashMap;
@@ -26,10 +26,12 @@ public class ListHandlerActivity extends Activity{
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.list_activity_main);
 
+
         DatabaseH db = new DatabaseH(this);
 
 
         final ListView listview = (ListView) findViewById(R.id.listview);
+
         final GetArrayAdapter adapter = new GetArrayAdapter(this,
         android.R.layout.simple_list_item_1, db.DisplayObjectName(db.getAllColumns()));
         listview.setAdapter(adapter);
@@ -37,6 +39,8 @@ public class ListHandlerActivity extends Activity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, final View view, int i, long l) {
                         passDataToTheChild(i);
+                        adapter.notifyDataSetInvalidated();
+
             }
         });
     }
@@ -66,7 +70,10 @@ public class ListHandlerActivity extends Activity{
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+                //NavUtils.navigateUpFromSameTask(this);
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

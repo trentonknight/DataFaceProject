@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 public class DatabaseH extends SQLiteOpenHelper{
 
+    private SQLiteDatabase sqLiteDatabase;
 
     private static final int DATABASE_VER = 2;
     private static final String DATABASE_NAME = "learning";
@@ -61,16 +63,18 @@ public class DatabaseH extends SQLiteOpenHelper{
         Cursor cursor = db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME,KEYS.KEY_CONTENT}, KEYS.KEY_ID + "=?",
                 new String[] { String.valueOf(id)}, null, null, null, null);
         if(cursor != null)
+            cursor.getCount();//refreshes cursor, how I don't know just yet
             cursor.moveToFirst();
             LittleConstructor con = new LittleConstructor(Integer.parseInt(cursor.getString(0)),
             cursor.getString(1), cursor.getString(2));
-
+        db.close();
         return con;
     }
 
     public Cursor getAllColumns(){
         SQLiteDatabase db = this.getReadableDatabase();
         return db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME, KEYS.KEY_CONTENT},null,null,null,null,null);
+
     }
 
     public List<String> DisplayObjectName(Cursor c){
@@ -81,5 +85,24 @@ public class DatabaseH extends SQLiteOpenHelper{
         }
         return array;
     }
+
+    public void deleteTable(int delID){
+      sqLiteDatabase = this.getWritableDatabase();
+      sqLiteDatabase.delete(KEYS.TABLE_NAME, "id =" + delID, new String[] {});
+      Log.d("Deleted Database", "Database removed");
+      sqLiteDatabase.close();
+    }
+
+    public void destroyTable(){
+        sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(KEYS.TABLE_NAME, "1", new String[] {});
+        Log.d("Deleted Database", "Database removed");
+        sqLiteDatabase.close();
+    }
+
+
+
+
+
 
 }

@@ -1,19 +1,17 @@
 package com.beta.dataface;
 
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ListChildActivity extends Activity {
 
 
+private static int position = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +28,8 @@ public class ListChildActivity extends Activity {
         Bundle bundle = getIntent().getExtras();
         int newContent = bundle.getInt("position");
         newContent++;
+        position = newContent;///pass to position for delObjectColumn
+
         LittleConstructor singleObject = db.getSingleObject(newContent);
 
         //int id_number = singleObject.getID(); save for rainy day
@@ -42,6 +42,15 @@ public class ListChildActivity extends Activity {
         tv_two.setText(OB_name);
 
 
+    }
+    public void delObjectColumn(){
+        DatabaseH db = new DatabaseH(this);
+         try{
+       db.deleteTable(position);
+
+       } catch (IndexOutOfBoundsException e){
+          Log.d("Index out of bound","IndexOutOfBoundsException");
+        }
     }
 
 
@@ -58,14 +67,19 @@ public class ListChildActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.list_child, menu);
+         getMenuInflater().inflate(R.menu.list_child_menu, menu);
         return true;
     }
     
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+
         switch (item.getItemId()) {
+            case R.id.content_discard:
+                 delObjectColumn();
+                return true;
             case android.R.id.home:
                 // This ID represents the Home or Up button. In the case of this
                 // activity, the Up button is shown. Use NavUtils to allow users

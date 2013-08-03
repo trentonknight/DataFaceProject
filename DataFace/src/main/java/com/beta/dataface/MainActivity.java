@@ -15,6 +15,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_main);
+        //DatabaseH db = new DatabaseH(this);
+        //db.destroyTable();
 
     }
     public void newObject(View view){
@@ -28,7 +30,6 @@ public class MainActivity extends Activity {
         startActivity(intent);
         finish();
     }
-
 
 
     @Override

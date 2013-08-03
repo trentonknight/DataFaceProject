@@ -28,6 +28,9 @@ public class AddNewObject extends Activity {
          String on = objectName.getText().toString();
          String oc = objectContents.getText().toString();
          data.addObject(new LittleConstructor(on,oc));
+        //return to MainActivity after data entry
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
     /**
      * Set up the {@link android.app.ActionBar}.
