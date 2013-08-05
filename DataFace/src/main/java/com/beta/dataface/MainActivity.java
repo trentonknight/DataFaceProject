@@ -15,8 +15,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_main);
-        //DatabaseH db = new DatabaseH(this);
-        //db.destroyTable();
 
     }
     public void newObject(View view){
@@ -29,6 +27,12 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(view.getContext(), ListViewLoader.class);
         startActivity(intent);
         finish();
+    }
+    public void destroyDb(View view){
+        Intent intent = new Intent(getApplicationContext(), DatabaseH.class);
+        DatabaseH db = new DatabaseH(this);
+        db.destroyTable();
+        startActivity(intent);
     }
 
 

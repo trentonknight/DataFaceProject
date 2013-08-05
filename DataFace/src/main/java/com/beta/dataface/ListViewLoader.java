@@ -1,16 +1,17 @@
 package com.beta.dataface;
 
 
-import android.*;
-import android.R;
 import android.app.ListActivity;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -18,6 +19,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
+
+import org.w3c.dom.Comment;
 
 /**
  * Created by trentonknight on 8/3/13.
@@ -43,31 +46,45 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
         root.addView(progressBar);
 
 
-        String[] fromColumns = {DatabaseH.KEYS.KEY_OBNAME};
-        int[] toViews = {android.R.id.text1};
-        DatabaseH db = new DatabaseH(this);
+        final String[] fromColumns = {DatabaseH.KEYS.KEY_OBNAME};
+        final int[] toViews = {android.R.id.text1};
+        final DatabaseH db = new DatabaseH(this);
         db.onOpen(db.getReadableDatabase());
 
-        Cursor data = db.getAllColumns();
+        final Cursor data = db.getAllColumns();
 
 
         mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
                 data, fromColumns, toViews, 0);
-        ListView listView = getListView();
+        final ListView listView = getListView();
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+               int count = data.getCount();
+               if(count < l){
+               Cursor dataTwo = db.removedViewItem(1);
+               mAdapter.swapCursor(dataTwo);
+               mAdapter.notifyDataSetChanged();
+               //listView.setAdapter(mAdapter);
+
+               }
                passDataToTheChild(i);
+
             }
         });
+
     }
+
+
 
     // Called when a new Loader needs to be created
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         // Now create and return a CursorLoader that will take care of
         // creating a Cursor for the data being displayed.
-        return new CursorLoader(this, null,
+        return new CursorLoader(ListViewLoader.this, null,
                 PROJECTION, SELECTION, null, null);
     }
 
@@ -95,10 +112,21 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
 
         Intent intent = new Intent(this, ListChildActivity.class);
         Bundle bundle = new Bundle();
-        //bundle.putString("content",content);
         bundle.putInt("position", position);
         intent.putExtras(bundle);
         startActivity(intent);
 
+    } @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -25,6 +25,16 @@
             android:onClick="newObject"
             android:id="@+id/buttonTwo"/>
 
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/destroy_db"
+            android:id="@+id/button2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/button"
+            android:layout_marginBottom="13dp"
+            android:onClick="destroyDb"/>
 
 
 </RelativeLayout>

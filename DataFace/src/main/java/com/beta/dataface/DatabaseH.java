@@ -18,7 +18,7 @@ public class DatabaseH extends SQLiteOpenHelper{
 
     private SQLiteDatabase sqLiteDatabase;
 
-    private static final int DATABASE_VER = 2;
+    private static final int DATABASE_VER = 1;
     private static final String DATABASE_NAME = "learning";
     //table columns
 
@@ -41,11 +41,18 @@ public class DatabaseH extends SQLiteOpenHelper{
                 + KEYS.KEY_CONTENT+ " TEXT" + ")";
         db.execSQL(CREATE_OBJECT_TABLE);
     }
+    public Cursor removedViewItem(int remaining){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        return db.rawQuery("UPDATE objects SET _id=3 WHERE _id=4",null);
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS " + KEYS.TABLE_NAME);
         onCreate(db);
     }
+
+
 
     //add new contact
     public void addObject(LittleConstructor constructObject){
@@ -75,7 +82,10 @@ public class DatabaseH extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getReadableDatabase();
         return db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, KEYS.KEY_OBNAME, KEYS.KEY_CONTENT},null,null,null,null,null);
 
+
     }
+
+
 
     public List<String> DisplayObjectName(Cursor c){
         List<String> array = new ArrayList<String>();
@@ -88,7 +98,7 @@ public class DatabaseH extends SQLiteOpenHelper{
 
     public void deleteTable(int delID){
       sqLiteDatabase = this.getWritableDatabase();
-      sqLiteDatabase.delete(KEYS.TABLE_NAME, "id =" + delID, new String[] {});
+      sqLiteDatabase.delete(KEYS.TABLE_NAME, "_id =" + delID, new String[] {});
       Log.d("Deleted Database", "Database removed");
       sqLiteDatabase.close();
     }

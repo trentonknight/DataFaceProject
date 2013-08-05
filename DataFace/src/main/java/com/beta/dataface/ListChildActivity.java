@@ -1,13 +1,13 @@
 package com.beta.dataface;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListChildActivity extends Activity {
@@ -48,14 +48,12 @@ private static int position = 0;
     public void delObjectColumn(){
         DatabaseH db = new DatabaseH(this);
          try{
-       final ListView listview = (ListView) findViewById(R.id.list);
        db.deleteTable(position);
-      // int current = listview.getSelectedItemPosition();
-       //listview.removeViewAt(current);
-       listview.removeAllViews();
-       ////Intent intent = new Intent(getApplicationContext(),ListHandlerActivity.class);
-       //Bundle bundle = new Bundle();
-
+       //Cursor cursor = db.getAllColumns();
+      // cursor.close();
+      // db.close();
+       Intent intent = new Intent(getApplicationContext(), ListViewLoader.class);
+       startActivity(intent);
        } catch (IndexOutOfBoundsException e){
           Log.d("Index out of bound","IndexOutOfBoundsException");
         }
@@ -89,6 +87,7 @@ private static int position = 0;
                  delObjectColumn();
                 return true;
             case android.R.id.home:
+
                 // This ID represents the Home or Up button. In the case of this
                 // activity, the Up button is shown. Use NavUtils to allow users
                 // to navigate up one level in the application structure. For
@@ -96,7 +95,10 @@ private static int position = 0;
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpFromSameTask(this);
+                //Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),ListViewLoader.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);NavUtils.navigateUpFromSameTask(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);

@@ -10,6 +10,7 @@
     <string name="button_send">Learning Objects</string>
     <string name="child">Child Activity</string>
     <string name="content_discard">Delete Object</string>
+    <string name="destroy_db">Destroy DB</string>
     <string name="hello_world">Hello world!</string>
     <string name="ob_con">Contents</string>
     <string name="ob_name">Object Name</string>

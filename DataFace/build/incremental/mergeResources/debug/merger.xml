@@ -104,6 +104,8 @@
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
+                <string name="destroy_db" >Destroy DB
+                </string>
                 <string name="title_activity_easy_list" >EasyListActivity
                 </string>
                 <string name="child" >Child Activity
