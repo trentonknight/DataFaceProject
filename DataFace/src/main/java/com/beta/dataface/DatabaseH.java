@@ -41,10 +41,12 @@ public class DatabaseH extends SQLiteOpenHelper{
                 + KEYS.KEY_CONTENT+ " TEXT" + ")";
         db.execSQL(CREATE_OBJECT_TABLE);
     }
-    public Cursor removedViewItem(int remaining){
+    public void updateColumnItem(int set, int where){
         SQLiteDatabase db = this.getWritableDatabase();
-
-        return db.rawQuery("UPDATE objects SET _id=3 WHERE _id=4",null);
+        //return db.rawQuery("UPDATE objects SET _id="+ set + " WHERE _id="+ where,null);
+        ContentValues args = new ContentValues();
+        args.put(KEYS.KEY_ID,set);
+        db.update(KEYS.TABLE_NAME, args, KEYS.KEY_ID + "=" + where, null);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

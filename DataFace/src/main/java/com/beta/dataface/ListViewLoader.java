@@ -1,8 +1,11 @@
 package com.beta.dataface;
 
 
+import android.*;
+import android.R;
 import android.app.ListActivity;
 import android.app.LoaderManager;
+import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -62,17 +65,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-
-               int count = data.getCount();
-               if(count < l){
-               Cursor dataTwo = db.removedViewItem(1);
-               mAdapter.swapCursor(dataTwo);
-               mAdapter.notifyDataSetChanged();
-               //listView.setAdapter(mAdapter);
-
-               }
                passDataToTheChild(i);
-
             }
         });
 

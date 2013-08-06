@@ -49,11 +49,24 @@ private static int position = 0;
         DatabaseH db = new DatabaseH(this);
          try{
        db.deleteTable(position);
-       //Cursor cursor = db.getAllColumns();
-      // cursor.close();
-      // db.close();
-       Intent intent = new Intent(getApplicationContext(), ListViewLoader.class);
-       startActivity(intent);
+             Cursor data = db.getAllColumns();
+               int set = 0;//SQL SET command
+               int where = 0;//SQL WHERE command
+               int toTheBottom = 0;//index to the final column
+
+               int count = data.getCount();//get existing columns in table
+               toTheBottom = count - position;//get columns which need the IDs updated
+               where = count;
+               set = count -1;
+
+               while(toTheBottom != -1){//negative one to reach final column
+               db.updateColumnItem(set,where);//uses the SQLLiteDatabase update method
+               where++;
+               set++;
+               toTheBottom--;
+               }
+             Intent intent = new Intent(this, ListViewLoader.class);
+             startActivity(intent);
        } catch (IndexOutOfBoundsException e){
           Log.d("Index out of bound","IndexOutOfBoundsException");
         }
