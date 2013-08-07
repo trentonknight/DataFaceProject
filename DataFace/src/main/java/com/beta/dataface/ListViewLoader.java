@@ -57,7 +57,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
         final Cursor data = db.getAllColumns();
 
 
-        mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+        mAdapter = new SimpleCursorAdapter(this, R.layout.simple_list_item_1,
                 data, fromColumns, toViews, 0);
         final ListView listView = getListView();
         listView.setAdapter(mAdapter);

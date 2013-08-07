@@ -183,6 +183,11 @@
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/content_discard.png"
                 qualifiers="hdpi"
                 type="drawable" />
+            <file
+                name="thinker"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/thinker.png"
+                qualifiers="hdpi"
+                type="drawable" />
         </source>
         <source path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/build/res/rs/debug" />
     </dataSet>

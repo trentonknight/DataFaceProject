@@ -24,10 +24,23 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/textView"
+            style="@style/AppTheme"
             android:layout_below="@+id/textView2"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_marginTop="19dp"
-            style="@style/AppTheme"/>
+            android:layout_alignLeft="@+id/textView2"/>
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/gridview"
+              android:layout_width="fill_parent"
+              android:layout_height="400dp"
+              android:columnWidth="90dp"
+              android:numColumns="auto_fit"
+              android:verticalSpacing="10dp"
+              android:horizontalSpacing="10dp"
+              android:stretchMode="columnWidth"
+              android:gravity="center"
+              android:layout_below="@+id/textView"
+              android:layout_alignLeft="@+id/textView"
+              android:layout_marginTop="10dp"/>
 
 
 </RelativeLayout>

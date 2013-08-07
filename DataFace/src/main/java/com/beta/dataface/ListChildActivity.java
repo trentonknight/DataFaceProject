@@ -4,13 +4,18 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class ListChildActivity extends Activity {
+public class ListChildActivity extends FragmentActivity {
 
 
 private static int position = 0;
@@ -18,9 +23,6 @@ private static int position = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         setContentView(R.layout.child_activity);
         // Show the Up button in the action bar.
         setupActionBar();
@@ -42,6 +44,17 @@ private static int position = 0;
         TextView tv_two = (TextView) findViewById(R.id.textView2);
         tv.setText(content_now);
         tv_two.setText(OB_name);
+        ///begin gridview to be shown below the above textview for added features
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new GridAdapter(this));
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //begin new activity or fragment
+            }
+        });
+
 
 
     }
@@ -101,14 +114,6 @@ private static int position = 0;
                 return true;
             case android.R.id.home:
 
-                // This ID represents the Home or Up button. In the case of this
-                // activity, the Up button is shown. Use NavUtils to allow users
-                // to navigate up one level in the application structure. For
-                // more details, see the Navigation pattern on Android Design:
-                //
-                // http://developer.android.com/design/patterns/navigation.html#up-vs-back
-                //
-                //Intent intent = new Intent(this, MainActivity.class);
                 Intent intent = new Intent(getApplicationContext(),ListViewLoader.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);NavUtils.navigateUpFromSameTask(this);
