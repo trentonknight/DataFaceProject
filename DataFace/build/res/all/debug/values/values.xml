@@ -16,6 +16,7 @@
     <string name="ob_name">Object Name</string>
     <string name="ob_send">Submit new Object</string>
     <string name="title_activity_add_new_object">Add Object</string>
+    <string name="title_activity_answer">AnswerActivity</string>
     <string name="title_activity_easy_list">EasyListActivity</string>
     <string name="title_activity_list_child">Child</string>
     <string name="title_activity_list_handler">Object List</string>

@@ -1,0 +1,295 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Compact Laboratory Book
+% LaTeX Template
+% Version 1.0 (4/6/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Joan Queralt Gil (http://phobos.xtec.cat/jqueralt) using the labbook class by
+% Frank Kuster (http://www.ctan.org/tex-archive/macros/latex/contrib/labbook/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the labbook.cls file to be in the same directory as the
+% .tex file. The labbook.cls file provides the necessary structure to create the
+% lab book.
+%
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing lab book content.
+%
+% HOW TO USE THIS TEMPLATE 
+% Each day in the lab consists of three main things:
+%
+% 1. LABDAY: The first thing to put is the \labday{} command with a date in 
+% curly brackets, this will make a new section showing that you are working
+% on a new day.
+%
+% 2. EXPERIMENT/SUBEXPERIMENT: Next you need to specify what 
+% experiment(s) and subexperiment(s) you are working on with a 
+% \experiment{} and \subexperiment{} commands with the experiment 
+% shorthand in the curly brackets. The experiment shorthand is defined in the 
+% 'DEFINITION OF EXPERIMENTS' section below, this means you can 
+% say \experiment{pcr} and the actual text written to the PDF will be what 
+% you set the 'pcr' experiment to be. If the experiment is a one off, you can 
+% just write it in the bracket without creating a shorthand. Note: if you don't 
+% want to have an experiment, just leave this out and it won't be printed.
+%
+% 3. CONTENT: Following the experiment is the content, i.e. what progress 
+% you made on the experiment that day.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------                               
+
+\documentclass[fontsize=11pt, % Document font size
+paper=a4, % Document paper type
+twoside, % Shifts odd pages to the left for easier reading when printed, can be changed to oneside
+captions=tableheading,
+index=totoc,
+hyperref]{labbook}
+
+\usepackage[bottom=10em]{geometry} % Reduces the whitespace at the bottom of the page so more text can fit
+
+\usepackage[english]{babel} % English language
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[utf8]{inputenc} % Uses the utf8 input encoding
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage[osf]{mathpazo} % Palatino as the main font
+\linespread{1.05}\selectfont % Palatino needs some extra spacing, here 5% extra
+\usepackage[scaled=.88]{beramono} % Bera-Monospace
+\usepackage[scaled=.86]{berasans} % Bera Sans-Serif
+
+\usepackage{booktabs,array} % Packages for tables
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{graphicx} % Required for including images
+\usepackage{etoolbox}
+\usepackage[norule]{footmisc} % Removes the horizontal rule from footnotes
+\usepackage{lastpage} % Counts the number of pages of the document
+\usepackage{shadowtext}
+\usepackage{minted}
+\usepackage[backend=biber,
+style=authoryear-comp,
+natbib=true,
+]{biblatex}
+\addbibresource{JNMansfield_wk5StatusReport_03AUG13.bib}
+
+\usepackage{setspace}
+\usepackage{url}
+
+\addtokomafont{title}{\Huge\color{green!40!brown!80}} % Titles in custom blue color
+\addtokomafont{chapter}{\color{green!40!brown!80}} % Lab dates in olive green
+\addtokomafont{section}{\color{brown}} % Sections in sepia
+\addtokomafont{pagehead}{\normalfont\sffamily\color{gray}} % Header text in gray and sans serif
+\addtokomafont{caption}{\footnotesize\itshape} % Small italic font size for captions
+\addtokomafont{captionlabel}{\upshape\bfseries} % Bold for caption labels
+\addtokomafont{descriptionlabel}{\rmfamily}
+\setcapwidth[r]{10cm} % Right align caption text
+\setkomafont{footnote}{\sffamily} % Footnotes in sans serif
+
+\deffootnote[4cm]{4cm}{1em}{\textsuperscript{\thefootnotemark}} % Indent footnotes to line up with text
+
+\DeclareFixedFont{\textcap}{T1}{phv}{bx}{n}{1.5cm} % Font for main title: Helvetica 1.5 cm
+\DeclareFixedFont{\textaut}{T1}{phv}{bx}{n}{0.8cm} % Font for author name: Helvetica 0.8 cm
+
+\usepackage[nouppercase,headsepline]{scrpage2} % Provides headers and footers configuration
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+\clearscrheadfoot % Clean old definitions if they exist
+
+\automark[chapter]{chapter}
+\ohead{\headmark} % Prints outer header
+
+\setlength{\headheight}{25pt} % Makes the header take up a bit of extra space for aesthetics
+\setheadsepline{.4pt} % Creates a thin rule under the header
+\addtokomafont{headsepline}{\color{lightgray}} % Colors the rule under the header light gray
+
+\ofoot[\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}]{\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}} % Creates an outer footer of: "current page | total pages"
+
+% These lines make it so each new lab day directly follows the previous one i.e. does not start on a new page - comment them out to separate lab days on new pages
+\makeatletter
+\patchcmd{\addchap}{\if@openright\cleardoublepage\else\clearpage\fi}{\par}{}{}
+\makeatother
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+% These lines make it so every figure and equation in the document is numbered consecutively rather than restarting at 1 for each lab day - comment them out to remove this behavior
+\usepackage{chngcntr}
+\counterwithout{figure}{labday}
+\counterwithout{equation}{labday}
+
+% Hyperlink configuration
+\usepackage[
+pdfauthor={}, % Your name for the author field in the PDF
+pdftitle={Laboratory Journal}, % PDF title
+pdfsubject={}, % PDF subject
+bookmarksopen=true,
+linktocpage=true,
+pdfpagelabels=true,
+plainpages=false,
+colorlinks=true, % Turn off all coloring by changing this to false
+bookmarks=true,
+pdfview=FitB]{hyperref}
+
+\usepackage[stretch=10]{microtype} % Slightly tweak font spacing for aesthetics
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DEFINITION OF EXPERIMENTS
+%----------------------------------------------------------------------------------------
+
+% Template: \newexperiment{<abbrev>}[<short form>]{<long form>}
+% <abbrev> is the reference to use later in the .tex file in \experiment{}, the <short form> is only used in the table of contents and running title - it is optional, <long form> is what is printed in the lab book itself
+
+\newexperiment{exp1}[ListView]{Continued efforts with ListView and SQLite3}
+\newexperiment{exp2}[Adapters]{Implementing Adapters and Cursors in Android}
+\newexperiment{exp3}[Intent] {Whats your intent}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{\textcap{\shadowtext{CS493}\\
+\textaut{\small{Regis University}}	
+\textaut{\small{Senior Capstone}}\\		
+\textaut{\shadowtext{Week Five}}}
+}
+
+\author{
+\includegraphics[scale=0.5]{android.png}\\
+\textaut{\small{Intructor: Mr. Allan Rossi}}\\
+\textaut{\small{Author: Mr. Jason N Mansfield}}\\ \\ % Your name
+The Object Based Study Application % Your degree
+}
+\date{\today} % No date by default, add \today if you wish to include the publication date
+
+\maketitle % Title page
+
+\printindex
+\tableofcontents % Table of contents
+\newpage % Start lab look on a new page
+
+
+\pagestyle{scrheadings} % Begin using headers
+
+%----------------------------------------------------------------------------------------
+%	LAB BOOK CONTENTS
+%----------------------------------------------------------------------------------------
+
+\labday{\today}
+%-----------------------------------------
+
+\experiment{exp1}
+\begin{onehalfspace}
+I am pleased to announce that my knowledge of maintaining and utilizing the SQLite3 database~\citep{sqlite} in Android has become almost second nature to me at this time. Unfortunately, I am just now beginning to learn about the effects removing data can have on the ListView~\citep{ListView}. Before I explain my conundrum allow me to pass some details. I intended to release a beta this week in accordance with my schedule. This application is extremely buggy and while I do not believe it will harm your phone it should be deleted after examining. The current beta release is codenamed DataFace and can be cloned using Git here:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{html}
+git clone https://github.com/trentonknight/DataFaceProject.git
+\end{minted}
+\begin{onehalfspace}
+The project apk can be downloaded using wget, curl or with a browser from here:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{html}
+wget https://github.com/trentonknight/DataFaceProject/blob/master/DataFace/build/apk/DataFace-release-unsigned.apk
+\end{minted}
+\begin{onehalfspace}
+The codename for the project was unintentional. I simply began making headway while using this particular version. Currently, the ListView is created by a class I created called the ListViewLoader, not very original I know, this class extends a ListActivity~\citep{ListActivity} and implements a LoaderManager~\citep{lm} which uses Cursors~\citep{Cursor}. The ListViewLoader is using a ListView which creates the array type list which lists one specific item I have selected out of all the columns. In this particular case I have asked the Key Object name to be shown. Here is a view of the class DataBaseH which handle all the database calls:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+
+public Cursor getAllColumns(){
+SQLiteDatabase db = this.getReadableDatabase();
+return db.query(KEYS.TABLE_NAME, new String[] {KEYS.KEY_ID, 
+KEYS.KEY_OBNAME, KEYS.KEY_CONTENT},null,null,null,null,null);
+}
+
+\end{minted}
+\clearpage
+\begin{onehalfspace}
+Using the class getAllColumns the ListViewLoader class can now access this selection with a simple statement such as:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+final DatabaseH db = new DatabaseH(this);
+db.onOpen(db.getReadableDatabase());
+final Cursor data = db.getAllColumns();
+\end{minted}
+
+
+\experiment{exp2}
+\begin{onehalfspace}
+One of the best and worst features I have discovered while developing this particular application is the use of adapters~\citep{Adapter}. To being with, and in a large part due to the tutorials I was using, I started my original ListView using a ArrayAdapter~\citep{ArrayAdapter}. Additional research and study lead me to believe that the SimpleCursorAdapter~\citep{SimpleCursorAdapter} was more suited for applications use of SQLite3. I have had some difficulty with implementing a delete feature. Deleting from the database is easy enough but getting the ListView to recognize the item removal has been a major issue for me. So far the tutorials and books I have read seem to skirt around this very important feature. Today I was able to completely re-write my Parent ListView class and implement the SimpleCursorAdapter. It is my hope that this class offers more features which allow me to properly remove items from the ListView with ease. To demonstrate the use of the database, Cursor to the database, and the adapter being passed to the ListView, here is a code snippet of these features all together: 
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+String[] fromColumns = {DatabaseH.KEYS.KEY_OBNAME};
+int[] toViews = {android.R.id.text1};
+final DatabaseH db = new DatabaseH(this);
+db.onOpen(db.getReadableDatabase());
+
+final Cursor data = db.getAllColumns();
+
+
+mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+data, fromColumns, toViews, 0);
+final ListView listView = getListView();
+listView.setAdapter(mAdapter);
+listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+@Override
+public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+passDataToTheChild(i);
+db.close();
+}
+});
+\end{minted}
+\clearpage
+\experiment{exp3}
+\begin{onehalfspace}
+One major feature I took for granted when I began this project was the powerful use of what the Android API calls Intents~\citep{Intent}. Intents are an interesting concept defined by the latest API as:
+\end{onehalfspace}
+\begin{quote}
+An Intent provides a facility for performing late runtime binding between the code in different applications. Its most significant use is in the launching of activities, where it can be thought of as the glue between activities. It is basically a passive data structure holding an abstract description of an action to be performed.
+\end{quote}
+\begin{onehalfspace}
+	The Intent feature is what allowed me to pass a Bundle~\citep{Bundle} containing a needed variable from the Parent ListActivity to my Child Activity or more specifically from a Parent class to a Child class. It was necessary for me to pass the ListViews current position so the correct child was retrieved:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+
+public void passDataToTheChild(int position){
+
+Intent intent = new Intent(this, ListChildActivity.class);
+Bundle bundle = new Bundle();
+bundle.putInt("position", position);
+intent.putExtras(bundle);
+startActivity(intent);
+
+}
+\end{minted}
+\begin{onehalfspace}
+After which the Child Activity a class called ListChildActivity receives the bundle in the following fashion:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+Bundle bundle = getIntent().getExtras();
+int newContent = bundle.getInt("position");
+\end{minted}
+
+\begin{onehalfspace}
+It may not seem worth all those calls for a single variable but it was a vital part of my child reading the proper column in the database. It is possible I will find a better way to identify the current location of the ListView within the Child Activity, but for the time being this is the best solution I'm aware of. My Goal for next week is to solidify how the ListView communicates with the adapter and Cursor; I believe once I can grasp those concepts I can then remove the proper ListView Items to match the database deletions. 
+\end{onehalfspace}
+
+\clearpage
+\printbibliography
+
+\end{document}

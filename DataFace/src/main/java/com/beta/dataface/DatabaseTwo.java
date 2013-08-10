@@ -53,7 +53,16 @@ public class DatabaseTwo extends SQLiteOpenHelper
         onCreate(db);
     }
 
+    public void addNewContent(String obname, String content)
+    {
+        SQLiteDatabase dbTwo = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(CUBES.KEY_OBNAME, obname);
+        values.put(CUBES.KEY_CONTENT, content);
+        dbTwo.insert(CUBES.TABLE_NAME,null,values);
+        dbTwo.close();
 
+    }
 
     //add new contact
     public void addObject(LittleConstructor constructObject){

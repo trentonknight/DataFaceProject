@@ -1,0 +1,16 @@
+[0] Config.pm:300> INFO - This is Biber 0.9.9
+[1] Config.pm:303> INFO - Logfile is 'JNMansfield_wk4StatusReport_27JULY13.blg'
+[1] biber:145> INFO - === Sun Jul 28, 2013, 01:43:50
+[2] Biber.pm:271> INFO - Reading 'JNMansfield_wk4StatusReport_27JULY13.bcf'
+[17] Biber.pm:586> INFO - Found 7 citekeys in bib section 0
+[24] Biber.pm:2585> INFO - Processing bib section 0
+[38] Biber.pm:2677> INFO - Looking for bibtex format file 'JNMansfield_wk4StatusReport_27JULY13.bib' for section 0
+[39] bibtex.pm:829> INFO - Decoding LaTeX character macros into UTF-8
+[40] bibtex.pm:833> INFO - Finished Decoding LaTeX character macros into UTF-8
+[40] bibtex.pm:704> INFO - Found BibTeX data source 'JNMansfield_wk4StatusReport_27JULY13.bib'
+[79] Biber.pm:2480> INFO - Sorting list 'MAIN' keys
+[80] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[94] Biber.pm:2480> INFO - Sorting list 'SHORTHANDS' keys
+[94] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[100] bbl.pm:427> INFO - Writing 'JNMansfield_wk4StatusReport_27JULY13.bbl' with encoding 'UTF-8'
+[101] bbl.pm:498> INFO - Output to JNMansfield_wk4StatusReport_27JULY13.bbl

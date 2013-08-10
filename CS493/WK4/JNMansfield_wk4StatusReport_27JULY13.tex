@@ -1,0 +1,264 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Compact Laboratory Book
+% LaTeX Template
+% Version 1.0 (4/6/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Joan Queralt Gil (http://phobos.xtec.cat/jqueralt) using the labbook class by
+% Frank Kuster (http://www.ctan.org/tex-archive/macros/latex/contrib/labbook/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the labbook.cls file to be in the same directory as the
+% .tex file. The labbook.cls file provides the necessary structure to create the
+% lab book.
+%
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing lab book content.
+%
+% HOW TO USE THIS TEMPLATE 
+% Each day in the lab consists of three main things:
+%
+% 1. LABDAY: The first thing to put is the \labday{} command with a date in 
+% curly brackets, this will make a new section showing that you are working
+% on a new day.
+%
+% 2. EXPERIMENT/SUBEXPERIMENT: Next you need to specify what 
+% experiment(s) and subexperiment(s) you are working on with a 
+% \experiment{} and \subexperiment{} commands with the experiment 
+% shorthand in the curly brackets. The experiment shorthand is defined in the 
+% 'DEFINITION OF EXPERIMENTS' section below, this means you can 
+% say \experiment{pcr} and the actual text written to the PDF will be what 
+% you set the 'pcr' experiment to be. If the experiment is a one off, you can 
+% just write it in the bracket without creating a shorthand. Note: if you don't 
+% want to have an experiment, just leave this out and it won't be printed.
+%
+% 3. CONTENT: Following the experiment is the content, i.e. what progress 
+% you made on the experiment that day.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------                               
+
+\documentclass[fontsize=11pt, % Document font size
+paper=a4, % Document paper type
+twoside, % Shifts odd pages to the left for easier reading when printed, can be changed to oneside
+captions=tableheading,
+index=totoc,
+hyperref]{labbook}
+
+\usepackage[bottom=10em]{geometry} % Reduces the whitespace at the bottom of the page so more text can fit
+
+\usepackage[english]{babel} % English language
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[utf8]{inputenc} % Uses the utf8 input encoding
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage[osf]{mathpazo} % Palatino as the main font
+\linespread{1.05}\selectfont % Palatino needs some extra spacing, here 5% extra
+\usepackage[scaled=.88]{beramono} % Bera-Monospace
+\usepackage[scaled=.86]{berasans} % Bera Sans-Serif
+
+\usepackage{booktabs,array} % Packages for tables
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{graphicx} % Required for including images
+\usepackage{etoolbox}
+\usepackage[norule]{footmisc} % Removes the horizontal rule from footnotes
+\usepackage{lastpage} % Counts the number of pages of the document
+\usepackage{shadowtext}
+\usepackage{minted}
+\usepackage[backend=biber,
+style=authoryear-comp,
+natbib=true,
+]{biblatex}
+\addbibresource{JNMansfield_wk4StatusReport_27JULY13.bib}
+
+\usepackage{setspace}
+\usepackage{url}
+
+\addtokomafont{title}{\Huge\color{green!40!brown!80}} % Titles in custom blue color
+\addtokomafont{chapter}{\color{green!40!brown!80}} % Lab dates in olive green
+\addtokomafont{section}{\color{brown}} % Sections in sepia
+\addtokomafont{pagehead}{\normalfont\sffamily\color{gray}} % Header text in gray and sans serif
+\addtokomafont{caption}{\footnotesize\itshape} % Small italic font size for captions
+\addtokomafont{captionlabel}{\upshape\bfseries} % Bold for caption labels
+\addtokomafont{descriptionlabel}{\rmfamily}
+\setcapwidth[r]{10cm} % Right align caption text
+\setkomafont{footnote}{\sffamily} % Footnotes in sans serif
+
+\deffootnote[4cm]{4cm}{1em}{\textsuperscript{\thefootnotemark}} % Indent footnotes to line up with text
+
+\DeclareFixedFont{\textcap}{T1}{phv}{bx}{n}{1.5cm} % Font for main title: Helvetica 1.5 cm
+\DeclareFixedFont{\textaut}{T1}{phv}{bx}{n}{0.8cm} % Font for author name: Helvetica 0.8 cm
+
+\usepackage[nouppercase,headsepline]{scrpage2} % Provides headers and footers configuration
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+\clearscrheadfoot % Clean old definitions if they exist
+
+\automark[chapter]{chapter}
+\ohead{\headmark} % Prints outer header
+
+\setlength{\headheight}{25pt} % Makes the header take up a bit of extra space for aesthetics
+\setheadsepline{.4pt} % Creates a thin rule under the header
+\addtokomafont{headsepline}{\color{lightgray}} % Colors the rule under the header light gray
+
+\ofoot[\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}]{\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}} % Creates an outer footer of: "current page | total pages"
+
+% These lines make it so each new lab day directly follows the previous one i.e. does not start on a new page - comment them out to separate lab days on new pages
+\makeatletter
+\patchcmd{\addchap}{\if@openright\cleardoublepage\else\clearpage\fi}{\par}{}{}
+\makeatother
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+% These lines make it so every figure and equation in the document is numbered consecutively rather than restarting at 1 for each lab day - comment them out to remove this behavior
+\usepackage{chngcntr}
+\counterwithout{figure}{labday}
+\counterwithout{equation}{labday}
+
+% Hyperlink configuration
+\usepackage[
+pdfauthor={}, % Your name for the author field in the PDF
+pdftitle={Laboratory Journal}, % PDF title
+pdfsubject={}, % PDF subject
+bookmarksopen=true,
+linktocpage=true,
+pdfpagelabels=true,
+plainpages=false,
+colorlinks=true, % Turn off all coloring by changing this to false
+bookmarks=true,
+pdfview=FitB]{hyperref}
+
+\usepackage[stretch=10]{microtype} % Slightly tweak font spacing for aesthetics
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DEFINITION OF EXPERIMENTS
+%----------------------------------------------------------------------------------------
+
+% Template: \newexperiment{<abbrev>}[<short form>]{<long form>}
+% <abbrev> is the reference to use later in the .tex file in \experiment{}, the <short form> is only used in the table of contents and running title - it is optional, <long form> is what is printed in the lab book itself
+
+\newexperiment{Sqlite3}[SQLite3]{Continued efforts with SQLite3}
+\newexperiment{ListView}[ListView]{Continued efforts with ListView}
+\newexperiment{Gradle}[Gradle]{Some information regarding Gradle}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{\textcap{\shadowtext{CS493}\\
+\textaut{\small{Regis University}}	
+\textaut{\small{Senior Capstone}}\\		
+\textaut{\shadowtext{Week Four}}}
+}
+
+\author{
+\includegraphics[scale=0.5]{android.png}\\
+\textaut{\small{Intructor: Mr. Allan Rossi}}\\
+\textaut{\small{Author: Mr. Jason N Mansfield}}\\ \\ % Your name
+The Object Based Study Application % Your degree
+}
+\date{\today} % No date by default, add \today if you wish to include the publication date
+
+\maketitle % Title page
+
+\printindex
+\tableofcontents % Table of contents
+\newpage % Start lab look on a new page
+
+\begin{addmargin}[4cm]{0cm} % Makes the text width much shorter for a compact look
+
+\pagestyle{scrheadings} % Begin using headers
+
+%----------------------------------------------------------------------------------------
+%	LAB BOOK CONTENTS
+%----------------------------------------------------------------------------------------
+
+\labday{\today}
+%-----------------------------------------
+
+\experiment{Sqlite3}
+\begin{onehalfspace}
+I have been capable of investigating and utilizing the concept of CRUD based operation~\citep{Ravi} using the android API. I have created a rough Database handler which extends SQLiteOpenHelper\citep{sqlite, helper}. This extension has allowed me to create a SQLite database and table directly from the application itself launching. I have discovered that I can easily view the SQLite databases, tables and content within using adb. At this point I am fairly confident I will have a fully functional database within the week.
+\end{onehalfspace}
+\experiment{ListView}
+ListView is the other piece of the pie, so to speak. The ListView~\citep{listview} is specifically suited for the SQLite database. Simply put ListView is a String array which can be used to cycle through and create a View for the customer or developer. 
+\begin{minted}[fontsize=\scriptsize]{java}
+final ListView listview = (ListView) findViewById(R.id.listview);
+String[] values = new String[] {"Object 1", "Object 2", "Object 3", "Object 4"};
+
+final ArrayList<String> list = new ArrayList<String>();
+for(int i = 0; i < values.length; ++i){
+list.add(values[i]);
+}
+\end{minted}
+\begin{onehalfspace}
+My next step is to take the above code, or similar code, and retrieve the database information to place within it. I have created some constructors which should be helpful in filling the needed data into a String array. For example:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{java}
+public int getID(){
+return this._id;
+}
+public void setID(int id){
+this._id = id;
+}
+\end{minted}
+\begin{onehalfspace}
+Once I have succeeded with passing information from the SQLite database to the View, then I feel this application will truly begin growing.
+\end{onehalfspace}
+\experiment{Gradle}
+\begin{onehalfspace}
+Gradle is the new official build system for android applications~\citep{gradleware}. The new Android Studio is currently offered to developers with a warning that it has its flaws. One of the larger issues appears to be with the android.R library~\citep{R}. Many times the errors revolve around the R library due to poor editing in the layout:
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{xml}
+< RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context=".ListHandlerActivity">
+
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/listview"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content" />
+
+</RelativeLayout>
+\end{minted}
+\begin{onehalfspace}
+However, even once the error is fixed in the xml file, or sometimes without a mistake at all, R simply cannot seem to see the layout files. This is where Gradle comes to the rescue. The quickest way to deal with strange errors in the current Android Studio is to run CLI command in the root of the Project folder. For example:    
+\end{onehalfspace}
+\begin{minted}[fontsize=\scriptsize]{bash}
+./gradlew clean
+./gradlew assemble
+\end{minted}
+\begin{onehalfspace}
+	Once these Gradle type command are run, assuming the xml file was written correctly or corrected the layouts become recognized once again. This is of course a extremely limited view of the power Gradle holds. Gradle is a Domain Specific Language~\citep{gradle} which is used for automation purposes. While I am still new to this build system I can see how it could be used to copy previous build approaches and increase productivity. I have had some difficulty with a few of the Gradle concepts but I intend to explore the Gradle approach more in-depth over the next week. I feel its important to understand the build system for debugging purposes and clean code. Hopefully, I can add more about this exciting new tool on my next weekly summary.
+\end{onehalfspace}
+
+
+\end{addmargin}
+\clearpage
+\printbibliography
+
+\end{document}

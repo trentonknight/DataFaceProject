@@ -1,0 +1,120 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{gradleware}{misc}{}
+    \list{organization}{1}{%
+      {Gradleware Inc}%
+    }
+    \field{sortinit}{G}
+    \field{labelyear}{2013}
+    \field{title}{Gradle: The New Android Build System}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://www.gradleware.com/resources/tech/android
+    \endverb
+  \endentry
+
+  \entry{listview}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{L}
+    \field{labelyear}{2013}
+    \field{title}{ListView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/guide/topics/ui/layout/listview.html#Example
+    \endverb
+  \endentry
+
+  \entry{gradle}{misc}{}
+    \list{organization}{1}{%
+      {Gradleware Inc.}%
+    }
+    \field{sortinit}{O}
+    \field{labelyear}{2013}
+    \field{title}{Overview}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://www.gradle.org/overview
+    \endverb
+  \endentry
+
+  \entry{R}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{R}
+    \field{labelyear}{2013}
+    \field{title}{R}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/R.html
+    \endverb
+  \endentry
+
+  \entry{sqlite}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{Saving Data in SQL Databases}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/data-storage/databases.html
+    \endverb
+  \endentry
+
+  \entry{helper}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{SQLiteOpenHelper}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html
+    \endverb
+  \endentry
+
+  \entry{Ravi}{misc}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=ad69aa9a6066041c382b789116680400}{Tamada}{T\bibinitperiod}{Ravi}{R\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=ad69aa9a6066041c382b789116680400}{Tamada}{T\bibinitperiod}{Ravi}{R\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{ad69aa9a6066041c382b789116680400}
+    \strng{fullhash}{ad69aa9a6066041c382b789116680400}
+    \field{sortinit}{T}
+    \field{labelyear}{2012}
+    \field{title}{Android SQLite Database Tutorial}
+    \field{year}{2012}
+    \verb{url}
+    \verb http://www.androidhive.info/2011/11/android-sqlite-database-tutorial/
+    \endverb
+  \endentry
+
+\endrefsection
+\endinput
+

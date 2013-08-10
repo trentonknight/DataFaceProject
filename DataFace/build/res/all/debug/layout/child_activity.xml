@@ -26,21 +26,15 @@
             android:id="@+id/textView"
             style="@style/AppTheme"
             android:layout_below="@+id/textView2"
-            android:layout_alignLeft="@+id/textView2"/>
+	        android:layout_alignLeft="@+id/textView2"/>
 
-    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/gridview"
-              android:layout_width="fill_parent"
-              android:layout_height="400dp"
-              android:columnWidth="90dp"
-              android:numColumns="auto_fit"
-              android:verticalSpacing="10dp"
-              android:horizontalSpacing="10dp"
-              android:stretchMode="columnWidth"
-              android:gravity="center"
-              android:layout_below="@+id/textView"
-              android:layout_alignLeft="@+id/textView"
-              android:layout_marginTop="10dp"/>
+    <FrameLayout android:name="com.beta.dataface.ObjectFragment"
+              android:id="@+id/fragment_container"
+              android:layout_alignParentBottom="true"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:background="#D8000000"
+              tools:layout="@layout/child_activity"/>
 
 
 </RelativeLayout>

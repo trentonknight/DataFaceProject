@@ -29,6 +29,11 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="answer"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/answer.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
@@ -110,6 +115,8 @@
                 </string>
                 <string name="child" >Child Activity
                 </string>
+                <string name="title_activity_answer" >AnswerActivity
+                </string>
             </file>
             <file
                 name="ic_launcher"
@@ -174,6 +181,11 @@
                 </style>
             </file>
             <file
+                name="thinker"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/thinker.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
@@ -181,11 +193,6 @@
             <file
                 name="content_discard"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/content_discard.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="thinker"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/thinker.png"
                 qualifiers="hdpi"
                 type="drawable" />
         </source>

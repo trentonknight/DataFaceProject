@@ -29,7 +29,7 @@ public final class R {
         public static final int buttonTwo=0x7f080001;
         public static final int content_ch=0x7f08000b;
         public static final int content_discard=0x7f08000d;
-        public static final int gridview=0x7f080008;
+        public static final int fragment_container=0x7f080008;
         public static final int list=0x7f080009;
         public static final int name=0x7f08000a;
         public static final int obcontent_enter=0x7f080004;
@@ -47,10 +47,11 @@ public final class R {
     }
     public static final class menu {
         public static final int add_new_object=0x7f070000;
-        public static final int easy_list=0x7f070001;
-        public static final int list_child_menu=0x7f070002;
-        public static final int list_handler=0x7f070003;
-        public static final int main=0x7f070004;
+        public static final int answer=0x7f070001;
+        public static final int easy_list=0x7f070002;
+        public static final int list_child_menu=0x7f070003;
+        public static final int list_handler=0x7f070004;
+        public static final int main=0x7f070005;
     }
     public static final class string {
         /**  From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/strings.xml 
@@ -66,9 +67,10 @@ public final class R {
         public static final int ob_name=0x7f050008;
         public static final int ob_send=0x7f050009;
         public static final int title_activity_add_new_object=0x7f05000a;
-        public static final int title_activity_easy_list=0x7f05000b;
-        public static final int title_activity_list_child=0x7f05000c;
-        public static final int title_activity_list_handler=0x7f05000d;
+        public static final int title_activity_answer=0x7f05000b;
+        public static final int title_activity_easy_list=0x7f05000c;
+        public static final int title_activity_list_child=0x7f05000d;
+        public static final int title_activity_list_handler=0x7f05000e;
     }
     public static final class style {
         /**  From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/styles.xml 

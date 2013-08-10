@@ -1,0 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{July 28, 2013}{4}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {experiment}{\numberline {1}SQLite3}{4}{experiment.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {experiment}{\numberline {2}ListView}{4}{experiment.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {experiment}{\numberline {3}Gradle}{5}{experiment.1.3}

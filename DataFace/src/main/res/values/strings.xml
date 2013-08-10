@@ -15,5 +15,6 @@
     <string name="content_discard">Delete Object</string>
     <string name="title_activity_easy_list">EasyListActivity</string>
     <string name="destroy_db">Destroy DB</string>
+    <string name="title_activity_answer">AnswerActivity</string>
 
 </resources>

@@ -1,31 +1,38 @@
 package com.beta.dataface;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ListChildActivity extends FragmentActivity {
 
 
 private static int position = 0;
+SimpleCursorAdapter twoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.child_activity);
         // Show the Up button in the action bar.
         setupActionBar();
+
+   /*     FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        ObjectFragment obFrag = new ObjectFragment();
+        String frag1 = "fragOne";
+        fragmentTransaction.add(R.id.fragment_container,obFrag,frag1);
+        fragmentTransaction.commit();*/
 
         DatabaseH db = new DatabaseH(this);
 
@@ -39,24 +46,23 @@ private static int position = 0;
         //int id_number = singleObject.getID(); save for rainy day
         String OB_name = singleObject.getOB();
         String content_now = singleObject.getContent();
+        db.close();
 
         TextView tv = (TextView)findViewById(R.id.textView);
         TextView tv_two = (TextView) findViewById(R.id.textView2);
         tv.setText(content_now);
         tv_two.setText(OB_name);
-        ///begin gridview to be shown below the above textview for added features
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new GridAdapter(this));
 
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //begin new activity or fragment
-            }
-        });
-
-
-
+    }
+    SimpleCursorAdapter gridCursor(){
+        DatabaseTwo dbTwo = new DatabaseTwo(this);
+        String[] fromColumns = {DatabaseTwo.CUBES.KEY_OBNAME};
+        //int[] toViews = {R.id.gridview};
+        dbTwo.getReadableDatabase();
+        dbTwo.getAllColumns();
+        Cursor dataTwo = dbTwo.getAllColumns();
+       // SimpleCursorAdapter twoAdapter = new SimpleCursorAdapter(this, R.layout.child_activity, dataTwo, fromColumns, toViews,0);
+        return twoAdapter;
     }
     public void delObjectColumn(){
         DatabaseH db = new DatabaseH(this);
@@ -84,6 +90,7 @@ private static int position = 0;
           Log.d("Index out of bound","IndexOutOfBoundsException");
         }
     }
+
 
 
 
