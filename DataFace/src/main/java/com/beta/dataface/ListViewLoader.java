@@ -35,7 +35,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
     static final String[] PROJECTION = new String[] {DatabaseH.KEYS.KEY_ID,
             DatabaseH.KEYS.KEY_OBNAME};
     static final String SELECTION = "((" + DatabaseH.KEYS.KEY_OBNAME +
-            DatabaseH.KEYS.KEY_OBNAME + " != '' ))";
+            DatabaseH.KEYS.KEY_CONTENT+ " != '' ))";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

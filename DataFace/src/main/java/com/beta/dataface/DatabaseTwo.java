@@ -54,10 +54,12 @@ public class DatabaseTwo extends SQLiteOpenHelper
         onCreate(db);
     }
 
+
+
     public void addNewContent(String parent, String obname, String content)
     {
         SQLiteDatabase dbTwo = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
+            ContentValues values = new ContentValues();
         values.put(CUBES.KEY_PARENT, parent);
         values.put(CUBES.KEY_OBNAME, obname);
         values.put(CUBES.KEY_CONTENT, content);
@@ -70,10 +72,27 @@ public class DatabaseTwo extends SQLiteOpenHelper
         SQLiteDatabase db = this.getReadableDatabase();
         return db.query(CUBES.TABLE_NAME, new String[] {CUBES.KEY_ID, CUBES.KEY_PARENT, CUBES.KEY_OBNAME, CUBES.KEY_CONTENT},null,null,null,null,null);
 
+    }
+    public Cursor getColumnsWhere(String WHERE){
+        SQLiteDatabase db = this.getReadableDatabase();
+        //SELECT * FROM content WHERE parent="foo";
+        return db.query(CUBES.TABLE_NAME,null,"parent='" + WHERE + "'",null,null,null,null,null);
 
     }
 
 
+    ContentConstructor getSingleObject(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(CUBES.TABLE_NAME, new String[] {"_id " , CUBES.KEY_PARENT,CUBES.KEY_OBNAME,CUBES.KEY_CONTENT}, CUBES.KEY_ID + "=?",
+               new String[] { String.valueOf(id)}, null, null, null, null);
+        if(cursor != null)
+            cursor.getCount();
+        cursor.moveToFirst();
+        ContentConstructor con = new ContentConstructor(Integer.parseInt(cursor.getString(0)),
+                cursor.getString(1), cursor.getString(2),cursor.getString(3));
+        db.close();
+        return con;
+    }
 
     public List<String> DisplayObjectName(Cursor c){
         List<String> array = new ArrayList<String>();

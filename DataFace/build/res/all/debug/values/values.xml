@@ -21,7 +21,9 @@
     <string name="title_activity_content">ContentActivity</string>
     <string name="title_activity_easy_list">EasyListActivity</string>
     <string name="title_activity_list_child">Child</string>
+    <string name="title_activity_list_content">ListContentActivity</string>
     <string name="title_activity_list_handler">Object List</string>
+    <string name="title_activity_view_content_list">ViewContentListActivity</string>
     <!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

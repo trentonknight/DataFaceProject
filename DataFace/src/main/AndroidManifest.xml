@@ -54,6 +54,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.ListChildActivity" />
         </activity>
+        <activity
+            android:name="com.beta.dataface.ViewContentListActivity"
+            android:label="@string/title_activity_view_content_list"
+            android:parentActivityName="com.beta.dataface.ListViewLoader" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.beta.dataface.ListViewLoader" />
+        </activity>
+        <activity
+            android:name=".ContentTextAreaActivity"
+            android:label="@string/title_activity_list_content"
+            android:parentActivityName="com.beta.dataface.ViewContentListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.beta.dataface.ViewContentListActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -12,6 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76c35852-1d36-4837-9e2d-65c7f42cbb37" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentConstructor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentTextAreaActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ViewContentListActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/res/menu/list_content.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/res/layout/list_content_activity.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/res/menu/view_content_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataFace/src/main/res/layout/view_content_list_activity.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/res/all/debug/layout/easy_list.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/res/all/debug/menu/list_child.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/res/all/release/drawable-hdpi/content_discard.png" afterPath="" />
@@ -38,6 +45,16 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/res/all/release/values/values.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/source/buildConfig/release/com/beta/dataface/BuildConfig.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DataFace/build/source/r/release/com/beta/dataface/R.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/DataFace/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListViewLoader.java" afterPath="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListViewLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/build/source/r/debug/com/beta/dataface/R.java" afterPath="$PROJECT_DIR$/DataFace/build/source/r/debug/com/beta/dataface/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/build/res/all/debug/menu/list_child_menu.xml" afterPath="$PROJECT_DIR$/DataFace/build/res/all/debug/menu/list_child_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/res/menu/list_child_menu.xml" afterPath="$PROJECT_DIR$/DataFace/src/main/res/menu/list_child_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFace/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/DataFace/build/res/all/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataFace.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,6 +72,38 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentTextAreaActivity.java" line="28" class="com.beta.dataface.ContentTextAreaActivity" package="com.beta.dataface">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ViewContentListActivity.java" line="58" class="com.beta.dataface.ViewContentListActivity$1" package="com.beta.dataface">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -92,23 +141,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java" line="58" class="com.beta.dataface.DatabaseTwo" package="com.beta.dataface">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -121,7 +153,41 @@
       <file leaf-file-name="ListChildActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="56" selection-start="3485" selection-end="3485" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="2214">
+            <state line="15" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewContentListActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ViewContentListActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="49" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.4920354" vertical-offset="640" max-vertical-offset="1818">
+              <folding>
+                <element signature="e#1995#2260#0" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentTextAreaActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentTextAreaActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="38" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1566">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -130,18 +196,25 @@
       <file leaf-file-name="ContentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="6" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1350">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="10" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1242">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseTwo.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DatabaseTwo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="58" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-1.0137694" vertical-offset="1021" max-vertical-offset="1818">
+            <state line="76" column="0" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1018" max-vertical-offset="2160">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLiteDatabase.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteDatabase.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="35" selection-start="6631" selection-end="6631" vertical-scroll-proportion="0.0" vertical-offset="2048" max-vertical-offset="3402">
               <folding />
             </state>
           </provider>
@@ -201,24 +274,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ObjectFragment.java" />
-        <option value="$PROJECT_DIR$/DataFace/src/main/res/layout/fragment_one_layout.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentFragment.java" />
         <option value="$PROJECT_DIR$/DataFace/src/main/res/layout/child_activity.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/DataFace/src/main/res/menu/list_child_menu.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/res/layout/content_activity.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentActivity.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/res/menu/list_child_menu.xml" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/res/layout/view_content_list_activity.xml" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListViewLoader.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentConstructor.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListContentActivity.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/res/layout/list_content_activity.xml" />
         <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java" />
         <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentTextAreaActivity.java" />
+        <option value="$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ViewContentListActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1598" />
-    <option name="width" value="1924" />
-    <option name="height" value="1055" />
+    <option name="x" value="1590" />
+    <option name="y" value="139" />
+    <option name="width" value="1940" />
+    <option name="height" value="1071" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -246,7 +325,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -462,126 +540,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xxhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFaceProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFaceProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFaceProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFaceProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataFace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -592,18 +550,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="newGN" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CS493/WK6/UI.png" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.DataFace">
@@ -758,14 +716,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1598" y="0" width="1924" height="1055" extended-state="6" />
-    <editor active="false" />
+    <frame x="1590" y="139" width="1940" height="1071" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.66" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34065935" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -777,13 +736,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6703297" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6703297" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.66" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25111112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.6" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -849,114 +807,95 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/menu/add_new_object.xml">
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/LittleConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581">
+        <state line="47" column="32" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.9712974" vertical-offset="0" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/menu/list_child_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="618" selection-end="618" vertical-scroll-proportion="0.3677639" vertical-offset="0" max-vertical-offset="881">
-          <folding>
-            <element signature="e#135#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="43" selection-start="2334" selection-end="2334" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/add_new_object.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="66" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.6615087" vertical-offset="0" max-vertical-offset="517">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/list_child.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/view_content_list_activity.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/content_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="779" selection-end="779" vertical-scroll-proportion="-11.178572" vertical-offset="11" max-vertical-offset="864">
+        <state line="10" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="0.21352313" vertical-offset="0" max-vertical-offset="843">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="23" selection-start="2896" selection-end="2896" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="2106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/list_content_activity.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/AddNewObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="-0.16345063" vertical-offset="216" max-vertical-offset="1332">
+        <state line="30" column="47" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.6126418" vertical-offset="162" max-vertical-offset="882">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Activity.class">
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="16" selection-start="12141" selection-end="12141" vertical-scroll-proportion="0.0" vertical-offset="5160" max-vertical-offset="7866">
+        <state line="29" column="5" selection-start="657" selection-end="657" vertical-scroll-proportion="0.9238938" vertical-offset="0" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.7659575" vertical-offset="0" max-vertical-offset="630" />
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/layout/child_activity.xml">
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Handler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.55705994" vertical-offset="0" max-vertical-offset="1494" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="843">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListViewLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="8" selection-start="3744" selection-end="3744" vertical-scroll-proportion="1.1489362" vertical-offset="864" max-vertical-offset="1890">
+        <state line="40" column="43" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-1.0070796" vertical-offset="893" max-vertical-offset="1890">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/view/View.class">
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/database/sqlite/SQLiteDatabase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="513" selection-end="513" vertical-scroll-proportion="0.32258064" vertical-offset="0" max-vertical-offset="20628">
+        <state line="125" column="35" selection-start="6631" selection-end="6631" vertical-scroll-proportion="0.0" vertical-offset="2048" max-vertical-offset="3402">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java">
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="56" selection-start="3485" selection-end="3485" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="2214">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1350">
+        <state line="10" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1242">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.33333334" vertical-offset="1814" max-vertical-offset="2844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ListChildActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -965,8 +904,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/DatabaseTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="58" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-1.0137694" vertical-offset="1021" max-vertical-offset="1818">
+        <state line="76" column="0" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1018" max-vertical-offset="2160">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.33333334" vertical-offset="752" max-vertical-offset="7866">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ContentTextAreaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="38" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1566">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFace/src/main/java/com/beta/dataface/ViewContentListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="49" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.4920354" vertical-offset="640" max-vertical-offset="1818">
+          <folding>
+            <element signature="e#1995#2260#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -22,6 +22,12 @@
         <activity android:label="@string/title_activity_content" android:name="com.beta.dataface.ContentActivity" android:parentActivityName="com.beta.dataface.ListChildActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListChildActivity"/>
         </activity>
+        <activity android:label="@string/title_activity_view_content_list" android:name="com.beta.dataface.ViewContentListActivity" android:parentActivityName="com.beta.dataface.ListViewLoader">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListViewLoader"/>
+        </activity>
+        <activity android:label="@string/title_activity_list_content" android:name="com.beta.dataface.ContentTextAreaActivity" android:parentActivityName="com.beta.dataface.ViewContentListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ViewContentListActivity"/>
+        </activity>
     </application>
 
 </manifest>

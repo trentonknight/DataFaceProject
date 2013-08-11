@@ -1,17 +1,16 @@
 package com.beta.dataface;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class ListChildActivity extends FragmentActivity{
+public class ListChildActivity extends Activity {
 
 
 private static int position = 0;
@@ -102,6 +101,17 @@ SimpleCursorAdapter twoAdapter;
                 intentTwo.putExtras(bundle);
                 startActivity(intentTwo);
     }
+    public void contentViewer()
+    {
+                DatabaseH db = new DatabaseH(this);
+                LittleConstructor singleObject = db.getSingleObject(position);
+                String OB_name = singleObject.getOB();
+                Intent intentTwo = new Intent(getApplicationContext(), ViewContentListActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("OB_name",OB_name);
+                intentTwo.putExtras(bundle);
+                startActivity(intentTwo);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -112,6 +122,9 @@ SimpleCursorAdapter twoAdapter;
                 return true;
             case R.id.content_add:
                 contentAdder();
+                return true;
+            case R.id.view_as_list:
+                contentViewer();
                 return true;
             case android.R.id.home:
 
