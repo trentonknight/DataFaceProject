@@ -1,0 +1,18 @@
+[0] Config.pm:300> INFO - This is Biber 0.9.9
+[1] Config.pm:303> INFO - Logfile is 'JNMansfield_wk6StatusReport_10AUG13.blg'
+[1] biber:145> INFO - === Sat Aug 10, 2013, 18:10:37
+[2] Biber.pm:271> INFO - Reading 'JNMansfield_wk6StatusReport_10AUG13.bcf'
+[18] Biber.pm:586> INFO - Found 4 citekeys in bib section 0
+[25] Biber.pm:2585> INFO - Processing bib section 0
+[39] Biber.pm:2677> INFO - Looking for bibtex format file 'JNMansfield_wk6StatusReport_10AUG13.bib' for section 0
+[40] bibtex.pm:829> INFO - Decoding LaTeX character macros into UTF-8
+[40] bibtex.pm:833> INFO - Finished Decoding LaTeX character macros into UTF-8
+[41] bibtex.pm:704> INFO - Found BibTeX data source 'JNMansfield_wk6StatusReport_10AUG13.bib'
+[54] Utils.pm:168> WARN - Possible typo (case mismatch) between datasource keys: 'ListView' and 'listview' in file 'JNMansfield_wk6StatusReport_10AUG13.bib'
+[77] Biber.pm:2480> INFO - Sorting list 'MAIN' keys
+[77] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[89] Biber.pm:2480> INFO - Sorting list 'SHORTHANDS' keys
+[89] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[92] bbl.pm:427> INFO - Writing 'JNMansfield_wk6StatusReport_10AUG13.bbl' with encoding 'UTF-8'
+[93] bbl.pm:498> INFO - Output to JNMansfield_wk6StatusReport_10AUG13.bbl
+[93] Biber.pm:106> INFO - WARNINGS: 1

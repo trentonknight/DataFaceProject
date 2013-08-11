@@ -1,7 +1,5 @@
 package com.beta.dataface;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,7 +11,7 @@ import android.support.v4.app.NavUtils;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class ListChildActivity extends FragmentActivity {
+public class ListChildActivity extends FragmentActivity{
 
 
 private static int position = 0;
@@ -27,12 +25,7 @@ SimpleCursorAdapter twoAdapter;
         // Show the Up button in the action bar.
         setupActionBar();
 
-   /*     FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        ObjectFragment obFrag = new ObjectFragment();
-        String frag1 = "fragOne";
-        fragmentTransaction.add(R.id.fragment_container,obFrag,frag1);
-        fragmentTransaction.commit();*/
+
 
         DatabaseH db = new DatabaseH(this);
 
@@ -54,16 +47,7 @@ SimpleCursorAdapter twoAdapter;
         tv_two.setText(OB_name);
 
     }
-    SimpleCursorAdapter gridCursor(){
-        DatabaseTwo dbTwo = new DatabaseTwo(this);
-        String[] fromColumns = {DatabaseTwo.CUBES.KEY_OBNAME};
-        //int[] toViews = {R.id.gridview};
-        dbTwo.getReadableDatabase();
-        dbTwo.getAllColumns();
-        Cursor dataTwo = dbTwo.getAllColumns();
-       // SimpleCursorAdapter twoAdapter = new SimpleCursorAdapter(this, R.layout.child_activity, dataTwo, fromColumns, toViews,0);
-        return twoAdapter;
-    }
+
     public void delObjectColumn(){
         DatabaseH db = new DatabaseH(this);
          try{
@@ -119,11 +103,15 @@ SimpleCursorAdapter twoAdapter;
             case R.id.content_discard:
                  delObjectColumn();
                 return true;
+            case R.id.content_add:
+                Intent intentTwo = new Intent(getApplicationContext(), ContentActivity.class);
+                startActivity(intentTwo);
+                return true;
             case android.R.id.home:
 
                 Intent intent = new Intent(getApplicationContext(),ListViewLoader.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);NavUtils.navigateUpFromSameTask(this);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

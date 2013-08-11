@@ -5,6 +5,11 @@
           android:orderInCategory="100"
           android:showAsAction="never" />
 
+ <item android:id="@+id/content_add"
+          android:icon="@drawable/content_add"
+          android:title="@string/content_add"
+          android:showAsAction="ifRoom"/>
+
     <item android:id="@+id/content_discard"
           android:icon="@drawable/content_discard"
           android:title="@string/content_discard"     

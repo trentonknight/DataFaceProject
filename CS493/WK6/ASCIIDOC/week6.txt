@@ -1,0 +1,57 @@
+The Object Based Study Application
+==================================
+
+Jason Mansfield <mansf843@regis.edu>
+version 6
+
+.Project Update
+
+Recently, my project has been moving along at a good pace. During week three I was a little scared, but due to a week of leave, I was able to really bust out some code. Some of the implementations I have needed during the project has included the following Android based features:
+
+.The Object Based Study Application
+SQLite:: Using Java to perform CRUD operations.
+ListView:: Implementing a proper ListView to handle displaying data from the SQLite database.
+Gradle:: Using and understanding Gradle for compiling and automation tasks.
+Adapters:: Understanding and using adapters properly for creating views.
+Cursors:: Use of Cursors with my databases.
+Intent:: The powerful use of Intents in the Android API.
+Activities:: Activities are like a Main Class that can be started, paused, halted and so forth.
+Fragments:: Fragments are like sub-activities which can be used to create more dynamic features within the Activity itself.
+ 
+.Example Layout
+[source, xml]
+----
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/list"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:listitem="@android:layout/simple_expandable_list_item_1"/>
+
+</FrameLayout>
+----
+
+.Roadblocks
+
+The largest roadblock for me during this project was understanding how to perform basic CRUD operations with a SQLite database within my application and apply that to Views properly. Allot of new concepts within the Android API are involved. I'm certain a more experienced Java programmer may have flown through the same tutorials, but in the beginning I moved at a snails pace. 
+
+.Example Database
+[source, java]
+----
+public void onCreate(SQLiteDatabase db){
+        db.execSQL("DROP TABLE IF EXISTS " + KEYS.TABLE_NAME);
+        String CREATE_OBJECT_TABLE = "CREATE TABLE " + KEYS.TABLE_NAME + "("
+                + KEYS.KEY_ID + " INTEGER PRIMARY KEY," + KEYS.KEY_OBNAME + " TEXT,"
+                + KEYS.KEY_CONTENT+ " TEXT" + ")";
+        db.execSQL(CREATE_OBJECT_TABLE);
+    }
+----
+
+
+.What have I learned
+
+I cannot even begin to organize all that I have learned in this short time-frame. I have certainly improved as a Java programmer and I am slowly beginning to grasp the ins and outs of the API online. Thank God for Google fantastic documentation online. 

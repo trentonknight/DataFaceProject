@@ -1,0 +1,76 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{fragments}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{B}
+    \field{labelyear}{2013}
+    \field{title}{Building a Dynamic UI with Fragments}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/fragments/index.html
+    \endverb
+  \endentry
+
+  \entry{gridview}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{G}
+    \field{labelyear}{2013}
+    \field{title}{GridView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/widget/GridView.html
+    \endverb
+  \endentry
+
+  \entry{listview}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{L}
+    \field{labelyear}{2013}
+    \field{title}{ListView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/guide/topics/ui/layout/listview.html#Example
+    \endverb
+  \endentry
+
+  \entry{sqlite}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{Saving Data in SQL Databases}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/data-storage/databases.html
+    \endverb
+  \endentry
+
+\endrefsection
+\endinput
+
