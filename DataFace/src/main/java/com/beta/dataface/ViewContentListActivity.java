@@ -56,8 +56,8 @@ public class ViewContentListActivity extends ListActivity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                int local = data.getPosition();
-                passDataToTheChild(i);
+                int local = (int)l;
+                passDataToTheChild(local);
             }
         });
 

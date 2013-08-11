@@ -22,7 +22,6 @@ public class ContentTextAreaActivity extends Activity {
 
         Bundle bundle = getIntent().getExtras();
         int newContent = bundle.getInt("position");
-        newContent++;
         position = newContent;///pass to position for delObjectColumn
 
 
