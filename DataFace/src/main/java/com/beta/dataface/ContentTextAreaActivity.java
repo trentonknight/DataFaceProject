@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 public class ContentTextAreaActivity extends Activity {
 
-    private static int position = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +21,6 @@ public class ContentTextAreaActivity extends Activity {
 
         Bundle bundle = getIntent().getExtras();
         int newContent = bundle.getInt("position");
-        position = newContent;///pass to position for delObjectColumn
 
 
         ContentConstructor singleObject = db.getSingleObject(newContent);

@@ -19,6 +19,6 @@
     <string name="title_activity_answer">AnswerActivity</string>
     <string name="title_activity_content">ContentActivity</string>
     <string name="title_activity_view_content_list">ViewContentListActivity</string>
-    <string name="title_activity_list_content">ListContentActivity</string>
+    <string name="title_activity_list_content">Content</string>
 
 </resources>

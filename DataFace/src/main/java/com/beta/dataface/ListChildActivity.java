@@ -57,16 +57,18 @@ SimpleCursorAdapter twoAdapter;
                int toTheBottom = 0;//index to the final column
 
                int count = data.getCount();//get existing columns in table
-               toTheBottom = count - position;//get columns which need the IDs updated
+               toTheBottom = count;//get columns which need the IDs updated
                where = count;
                set = count -1;
 
-               while(toTheBottom != -1){//negative one to reach final column
+               //negative one to reach final column
+             do{
                db.updateColumnItem(set,where);//uses the SQLLiteDatabase update method
                where++;
                set++;
                toTheBottom--;
-               }
+               }while(toTheBottom != 0);
+
              Intent intent = new Intent(this, ListViewLoader.class);
              startActivity(intent);
        } catch (IndexOutOfBoundsException e){
