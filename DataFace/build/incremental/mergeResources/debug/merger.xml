@@ -4,6 +4,11 @@
     <dataSet config="main" >
         <source path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res" >
             <file
+                name="content"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/content.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="main"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/main.xml"
                 qualifiers=""
@@ -55,6 +60,11 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="content_add"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-xhdpi/content_add.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
@@ -95,11 +105,15 @@
                 </string>
                 <string name="title_activity_add_new_object" >Add Object
                 </string>
+                <string name="content_add" >Add Content
+                </string>
                 <string name="button_send" >Learning Objects
                 </string>
                 <string name="title_activity_list_handler" >Object List
                 </string>
                 <string name="app_name" >DataFace
+                </string>
+                <string name="title_activity_content" >ContentActivity
                 </string>
                 <string name="ob_con" >Contents
                 </string>
@@ -129,6 +143,11 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="content_add"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-xxhdpi/content_add.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
@@ -138,6 +157,16 @@
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/content_discard.png"
                 qualifiers="mdpi"
                 type="drawable" />
+            <file
+                name="content_add"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-mdpi/content_add.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_activity"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/content_activity.xml"
+                qualifiers=""
+                type="layout" />
             <file
                 name="list_child"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_child.xml"
@@ -193,6 +222,11 @@
             <file
                 name="content_discard"
                 path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/content_discard.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_add"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/drawable-hdpi/content_add.png"
                 qualifiers="hdpi"
                 type="drawable" />
         </source>

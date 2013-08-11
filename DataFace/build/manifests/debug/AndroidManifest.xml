@@ -19,6 +19,9 @@
         <activity android:label="@string/title_activity_list_child" android:name="com.beta.dataface.ListChildActivity" android:parentActivityName="com.beta.dataface.ListViewLoader">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListViewLoader"/>
         </activity>
+        <activity android:label="@string/title_activity_content" android:name="com.beta.dataface.ContentActivity" android:parentActivityName="com.beta.dataface.ListChildActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListChildActivity"/>
+        </activity>
     </application>
 
 </manifest>

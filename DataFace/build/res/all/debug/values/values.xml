@@ -9,6 +9,7 @@
     <string name="app_name">DataFace</string>
     <string name="button_send">Learning Objects</string>
     <string name="child">Child Activity</string>
+    <string name="content_add">Add Content</string>
     <string name="content_discard">Delete Object</string>
     <string name="destroy_db">Destroy DB</string>
     <string name="hello_world">Hello world!</string>
@@ -17,6 +18,7 @@
     <string name="ob_send">Submit new Object</string>
     <string name="title_activity_add_new_object">Add Object</string>
     <string name="title_activity_answer">AnswerActivity</string>
+    <string name="title_activity_content">ContentActivity</string>
     <string name="title_activity_easy_list">EasyListActivity</string>
     <string name="title_activity_list_child">Child</string>
     <string name="title_activity_list_handler">Object List</string>

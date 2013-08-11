@@ -76,8 +76,6 @@ SimpleCursorAdapter twoAdapter;
     }
 
 
-
-
     /**
      * Set up the {@link android.app.ActionBar}.
      */
@@ -94,7 +92,16 @@ SimpleCursorAdapter twoAdapter;
         return true;
     }
     
-
+    public void contentAdder()
+    {           DatabaseH db = new DatabaseH(this);
+                LittleConstructor singleObject = db.getSingleObject(position);
+                String OB_name = singleObject.getOB();
+                Intent intentTwo = new Intent(getApplicationContext(), ContentActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("OB_name",OB_name);
+                intentTwo.putExtras(bundle);
+                startActivity(intentTwo);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -104,8 +111,7 @@ SimpleCursorAdapter twoAdapter;
                  delObjectColumn();
                 return true;
             case R.id.content_add:
-                Intent intentTwo = new Intent(getApplicationContext(), ContentActivity.class);
-                startActivity(intentTwo);
+                contentAdder();
                 return true;
             case android.R.id.home:
 

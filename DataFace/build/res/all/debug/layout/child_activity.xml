@@ -28,14 +28,6 @@
             android:layout_below="@+id/textView2"
 	        android:layout_alignLeft="@+id/textView2"/>
 
-    <FrameLayout android:name="com.beta.dataface.ObjectFragment"
-              android:id="@+id/fragment_container"
-              android:layout_alignParentBottom="true"
-              android:layout_width="match_parent"
-              android:layout_height="300dp"
-              android:background="#D8000000"
-              tools:layout="@layout/child_activity"/>
-
 
 </RelativeLayout>
 <!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/child_activity.xml -->

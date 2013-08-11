@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class ContentActivity extends Activity {
 
@@ -15,18 +17,24 @@ public class ContentActivity extends Activity {
         // Show the Up button in the action bar.
         setupActionBar();
 
-        DatabaseTwo db = new DatabaseTwo(this);
+ }
+    public void newContentData(View view)
+    {
+         DatabaseTwo db = new DatabaseTwo(this);
+         Bundle bundle = getIntent().getExtras();
+         String OB_name = bundle.getString("OB_name");
 
+         EditText ed1 = (EditText) findViewById(R.id.editText);
+         EditText ed2 = (EditText) findViewById(R.id.editText2);
 
+         String str1 = ed1.getText().toString();
+         String str2 = ed2.getText().toString();
 
+         db.addNewContent(OB_name,str1,str2);
 
-
-
-/*
-        TextView tv = (TextView)findViewById(R.id.textView);
-        TextView tv_two = (TextView) findViewById(R.id.textView2);
-        tv.setText(content_now);
-        tv_two.setText(OB_name); */   }
+         Intent intent = new Intent(getApplicationContext(), ListViewLoader.class);
+         startActivity(intent);
+    }
 
     /**
      * Set up the {@link android.app.ActionBar}.

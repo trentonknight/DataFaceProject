@@ -19,13 +19,14 @@ public class DatabaseTwo extends SQLiteOpenHelper
     private SQLiteDatabase sqLiteDatabase;
 
     private static final int DATABASE_VER = 1;
-    private static final String DATABASE_NAME = "griddatabase";
+    private static final String DATABASE_NAME = "objectcontent";
     //table columns
 
     public static final class CUBES implements BaseColumns {
         private CUBES() {}
-        public static final String TABLE_NAME = "gridtable";
+        public static final String TABLE_NAME = "content";
         public static final String KEY_ID = "_id";
+        public static final String KEY_PARENT = "parent";
         public static final String KEY_OBNAME = "cubename";
         public static final String KEY_CONTENT = "cube";
     }
@@ -37,8 +38,8 @@ public class DatabaseTwo extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase db){
         db.execSQL("DROP TABLE IF EXISTS " + CUBES.TABLE_NAME);
         String CREATE_OBJECT_TABLE = "CREATE TABLE " + CUBES.TABLE_NAME + "("
-                + CUBES.KEY_ID + " INTEGER PRIMARY KEY," + CUBES.KEY_OBNAME + " TEXT,"
-                + CUBES.KEY_CONTENT+ " TEXT" + ")";
+                + CUBES.KEY_ID + " INTEGER PRIMARY KEY," + CUBES.KEY_PARENT + " TEXT," +
+                CUBES.KEY_OBNAME + " TEXT," + CUBES.KEY_CONTENT+ " TEXT" + ")";
         db.execSQL(CREATE_OBJECT_TABLE);
     }
     public void updateCubeColumns(int set, int where){
@@ -53,10 +54,11 @@ public class DatabaseTwo extends SQLiteOpenHelper
         onCreate(db);
     }
 
-    public void addNewContent(String obname, String content)
+    public void addNewContent(String parent, String obname, String content)
     {
         SQLiteDatabase dbTwo = this.getWritableDatabase();
         ContentValues values = new ContentValues();
+        values.put(CUBES.KEY_PARENT, parent);
         values.put(CUBES.KEY_OBNAME, obname);
         values.put(CUBES.KEY_CONTENT, content);
         dbTwo.insert(CUBES.TABLE_NAME,null,values);
@@ -64,33 +66,9 @@ public class DatabaseTwo extends SQLiteOpenHelper
 
     }
 
-    //add new contact
-    public void addObject(LittleConstructor constructObject){
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(CUBES.KEY_OBNAME, constructObject.getOB());//object name
-        values.put(CUBES.KEY_CONTENT, constructObject.getContent());//inside content for object
-        //insert row
-        db.insert(CUBES.TABLE_NAME, null, values);
-        db.close();
-    }
-    LittleConstructor getSingleObject(int id){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(CUBES.TABLE_NAME, new String[] {"_id " , CUBES.KEY_OBNAME,CUBES.KEY_CONTENT}, CUBES.KEY_ID + "=?",
-                new String[] { String.valueOf(id)}, null, null, null, null);
-        if(cursor != null)
-            cursor.getCount();//refreshes cursor, how I don't know just yet
-        cursor.moveToFirst();
-        LittleConstructor con = new LittleConstructor(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2));
-        db.close();
-        return con;
-    }
-
     public Cursor getAllColumns(){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.query(CUBES.TABLE_NAME, new String[] {CUBES.KEY_ID, CUBES.KEY_OBNAME, CUBES.KEY_CONTENT},null,null,null,null,null);
+        return db.query(CUBES.TABLE_NAME, new String[] {CUBES.KEY_ID, CUBES.KEY_PARENT, CUBES.KEY_OBNAME, CUBES.KEY_CONTENT},null,null,null,null,null);
 
 
     }
