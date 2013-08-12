@@ -7,13 +7,13 @@ import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.widget.TextView;
 
-public class ContentTextAreaActivity extends Activity {
+public class TextViewTwo extends Activity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_content_activity);
+        setContentView(R.layout.text_view_two);
         // Show the Up button in the action bar.
         setupActionBar();
 
@@ -23,7 +23,7 @@ public class ContentTextAreaActivity extends Activity {
         int newContent = bundle.getInt("position");
 
 
-        ContentConstructor singleObject = db.getSingleObject(newContent);
+        ConstructorTwo singleObject = db.getSingleObject(newContent);
 
         String parent = singleObject.getParent();
         String cubename = singleObject.getCubeName();
@@ -53,7 +53,7 @@ public class ContentTextAreaActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.list_content, menu);
+        getMenuInflater().inflate(R.menu.text_view_two, menu);
         return true;
     }
 

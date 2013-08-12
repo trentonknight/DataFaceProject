@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".AddNewObject">
+
+    <EditText android:id="@+id/obname_enter"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="@string/ob_name"
+            />
+    <EditText android:id="@+id/obcontent_enter"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:layout_below="@id/obname_enter"
+              android:text="@string/ob_con"/>
+
+  <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/ob_send"
+        android:id="@+id/object_name"
+        android:onClick="newDataIntoTable"
+        android:layout_below="@+id/obcontent_enter"
+        android:layout_alignLeft="@+id/obcontent_enter"/>
+
+</RelativeLayout>
+<!-- From: file:/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/get_uti_one.xml -->

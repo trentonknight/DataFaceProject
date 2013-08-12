@@ -23,48 +23,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.beta.dataface.ListViewLoader"
-            android:label="@string/title_activity_list_handler"
+            android:name=".ListViewLoaderOne"
+            android:label="@string/list_view_loader_one_string"
             android:parentActivityName="com.beta.dataface.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.MainActivity" />
         </activity>
         <activity
-            android:name="com.beta.dataface.AddNewObject"
-            android:label="@string/title_activity_add_new_object"
+            android:name=".GetUserTextInputOne"
+            android:label="@string/get_user_input_one_string"
             android:parentActivityName="com.beta.dataface.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.MainActivity" />
         </activity>
         <activity
-            android:name="com.beta.dataface.ListChildActivity"
-            android:label="@string/title_activity_list_child"
+            android:name=".TextViewOne"
+            android:label="@string/text_view_one_string"
             android:parentActivityName="com.beta.dataface.ListViewLoader" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.ListViewLoader" />
         </activity>
         <activity
-            android:name="com.beta.dataface.ContentActivity"
-            android:label="@string/title_activity_content"
+            android:name=".GetUserTextInputTwo"
+            android:label="@string/get_user_text_input_two_string"
             android:parentActivityName="com.beta.dataface.ListChildActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.ListChildActivity" />
         </activity>
         <activity
-            android:name="com.beta.dataface.ViewContentListActivity"
-            android:label="@string/title_activity_view_content_list"
+            android:name=".ListViewLoaderTwo"
+            android:label="@string/list_view_loader_two_string"
             android:parentActivityName="com.beta.dataface.ListViewLoader" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.beta.dataface.ListViewLoader" />
         </activity>
         <activity
-            android:name=".ContentTextAreaActivity"
-            android:label="@string/title_activity_list_content"
+            android:name=".TextViewTwo"
+            android:label="@string/text_view_two_string"
             android:parentActivityName="com.beta.dataface.ViewContentListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

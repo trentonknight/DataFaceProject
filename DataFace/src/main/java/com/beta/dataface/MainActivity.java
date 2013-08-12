@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
+import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
@@ -17,20 +17,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
     }
-    public void newObject(View view){
-        Intent intent = new Intent(view.getContext(), AddNewObject.class);
+    public void newObject(){
+        Intent intent = new Intent(this, GetUserTextInputOne.class);
         startActivity(intent);
         finish();
     }
 
-    public void activateList(View view){
-        Intent intent = new Intent(view.getContext(), ListViewLoader.class);
+    public void activateList(){
+        Intent intent = new Intent(this, ListViewLoaderOne.class);
         startActivity(intent);
         finish();
     }
-    public void destroyDb(View view){
-        Intent intent = new Intent(getApplicationContext(), DatabaseH.class);
-        DatabaseH db = new DatabaseH(this);
+    public void destroyDb(){
+        Intent intent = new Intent(getApplicationContext(), DatabaseOne.class);
+        DatabaseOne db = new DatabaseOne(this);
         db.destroyTable();
         startActivity(intent);
     }
@@ -42,5 +42,27 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+
+        switch (item.getItemId()) {
+            case R.id.content_discard:
+                destroyDb();
+                return true;
+            case R.id.content_add:
+                newObject();
+                return true;
+            case R.id.view_as_list:
+                activateList();
+                return true;
+            case android.R.id.home:
+
+                Intent intent = new Intent(getApplicationContext(),ListViewLoaderOne.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

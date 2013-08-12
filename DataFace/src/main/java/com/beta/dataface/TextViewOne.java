@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class ListChildActivity extends Activity {
+public class TextViewOne extends Activity {
 
 
 private static int position = 0;
@@ -20,20 +20,20 @@ SimpleCursorAdapter twoAdapter;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.child_activity);
+        setContentView(R.layout.text_view_one);
         // Show the Up button in the action bar.
         setupActionBar();
 
 
 
-        DatabaseH db = new DatabaseH(this);
+        DatabaseOne db = new DatabaseOne(this);
 
         Bundle bundle = getIntent().getExtras();
         int newContent = bundle.getInt("position");
         newContent++;
         position = newContent;///pass to position for delObjectColumn
 
-        LittleConstructor singleObject = db.getSingleObject(newContent);
+        ConstructorOne singleObject = db.getSingleObject(newContent);
 
         //int id_number = singleObject.getID(); save for rainy day
         String OB_name = singleObject.getOB();
@@ -48,7 +48,7 @@ SimpleCursorAdapter twoAdapter;
     }
 
     public void delObjectColumn(){
-        DatabaseH db = new DatabaseH(this);
+        DatabaseOne db = new DatabaseOne(this);
          try{
        db.deleteTable(position);
              Cursor data = db.getAllColumns();
@@ -69,7 +69,7 @@ SimpleCursorAdapter twoAdapter;
                toTheBottom--;
                }while(toTheBottom != 0);
 
-             Intent intent = new Intent(this, ListViewLoader.class);
+             Intent intent = new Intent(this, ListViewLoaderOne.class);
              startActivity(intent);
        } catch (IndexOutOfBoundsException e){
           Log.d("Index out of bound","IndexOutOfBoundsException");
@@ -89,15 +89,15 @@ SimpleCursorAdapter twoAdapter;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-         getMenuInflater().inflate(R.menu.list_child_menu, menu);
+         getMenuInflater().inflate(R.menu.text_view_one, menu);
         return true;
     }
     
     public void contentAdder()
-    {           DatabaseH db = new DatabaseH(this);
-                LittleConstructor singleObject = db.getSingleObject(position);
+    {           DatabaseOne db = new DatabaseOne(this);
+                ConstructorOne singleObject = db.getSingleObject(position);
                 String OB_name = singleObject.getOB();
-                Intent intentTwo = new Intent(getApplicationContext(), ContentActivity.class);
+                Intent intentTwo = new Intent(getApplicationContext(), GetUserTextInputTwo.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("OB_name",OB_name);
                 intentTwo.putExtras(bundle);
@@ -105,10 +105,10 @@ SimpleCursorAdapter twoAdapter;
     }
     public void contentViewer()
     {
-                DatabaseH db = new DatabaseH(this);
-                LittleConstructor singleObject = db.getSingleObject(position);
+                DatabaseOne db = new DatabaseOne(this);
+                ConstructorOne singleObject = db.getSingleObject(position);
                 String OB_name = singleObject.getOB();
-                Intent intentTwo = new Intent(getApplicationContext(), ViewContentListActivity.class);
+                Intent intentTwo = new Intent(getApplicationContext(), ListViewLoaderTwo.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("OB_name",OB_name);
                 intentTwo.putExtras(bundle);
@@ -130,7 +130,7 @@ SimpleCursorAdapter twoAdapter;
                 return true;
             case android.R.id.home:
 
-                Intent intent = new Intent(getApplicationContext(),ListViewLoader.class);
+                Intent intent = new Intent(getApplicationContext(),ListViewLoaderOne.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;

@@ -3,23 +3,23 @@ package com.beta.dataface;
 /**
  * Created by trentonknight on 7/24/13.
  */
-public class LittleConstructor {
+public class ConstructorOne {
 
     int _id;
     String _objectName;
     String _content;
 
-    public LittleConstructor(){
+    public ConstructorOne(){
 
     }
     //constructor
-    public LittleConstructor(int id, String objectName, String content){
+    public ConstructorOne(int id, String objectName, String content){
         this._id = id;
         this._objectName = objectName;
         this._content = content;
     }
     //constructor
-    public LittleConstructor(String objectName, String content){
+    public ConstructorOne(String objectName, String content){
         this._objectName = objectName;
         this._content = content;
     }
@@ -39,11 +39,11 @@ public class LittleConstructor {
     public void setOB(String objectName){
         this._objectName = objectName;
     }
-    //get content
+    //get get_uti_two_menu
     public String getContent(){
         return this._content;
     }
-    //set content
+    //set get_uti_two_menu
     public void setContent(String content){
         this._content = content;
     }

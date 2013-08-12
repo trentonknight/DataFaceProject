@@ -9,32 +9,7 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
-   <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="activateList"
-        android:id="@+id/button"/>
 
-
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/button"
-            android:text="@string/title_activity_add_new_object"
-            android:onClick="newObject"
-            android:id="@+id/buttonTwo"/>
-
-    <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/destroy_db"
-            android:id="@+id/button2"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/button"
-            android:layout_marginBottom="13dp"
-            android:onClick="destroyDb"/>
 
 
 </RelativeLayout>

@@ -8,12 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-public class AddNewObject extends Activity {
+public class GetUserTextInputOne extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_new_object);
+        setContentView(R.layout.get_uti_one);
         // Show the Up button in the action bar.
         setupActionBar();
 
@@ -21,13 +21,13 @@ public class AddNewObject extends Activity {
     }
 
     public void newDataIntoTable(View view){
-         DatabaseH data = new DatabaseH(this);
+         DatabaseOne data = new DatabaseOne(this);
 
          EditText objectName = (EditText) findViewById(R.id.obname_enter);
          EditText objectContents = (EditText) findViewById(R.id.obcontent_enter);
          String on = objectName.getText().toString();
          String oc = objectContents.getText().toString();
-         data.addObject(new LittleConstructor(on,oc));
+         data.addObject(new ConstructorOne(on,oc));
         //return to MainActivity after data entry
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
@@ -44,7 +44,7 @@ public class AddNewObject extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.add_new_object, menu);
+        getMenuInflater().inflate(R.menu.get_uti_one_menu, menu);
         return true;
     }
     

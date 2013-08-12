@@ -3,23 +3,23 @@ package com.beta.dataface;
 /**
  * Created by trentonknight on 8/11/13.
  */
-public class ContentConstructor {
+public class ConstructorTwo {
 
 int _id;
     String _parent;
     String _cubename;
     String _cube;
 
-    public ContentConstructor(){
+    public ConstructorTwo(){
 
     }
-    public ContentConstructor(int id, String parent, String cubename, String cube){
+    public ConstructorTwo(int id, String parent, String cubename, String cube){
         this._id = id;
         this._parent = parent;
         this._cubename = cubename;
         this._cube = cube;
     }
-    public ContentConstructor(String parent, String cubename, String cube){
+    public ConstructorTwo(String parent, String cubename, String cube){
         this._parent = parent;
         this._cubename = cubename;
         this._cube = cube;

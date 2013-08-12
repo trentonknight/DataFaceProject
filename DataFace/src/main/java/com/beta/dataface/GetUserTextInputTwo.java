@@ -8,12 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-public class ContentActivity extends Activity {
+public class GetUserTextInputTwo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_activity);
+        setContentView(R.layout.get_uti_two);
         // Show the Up button in the action bar.
         setupActionBar();
 
@@ -32,7 +32,7 @@ public class ContentActivity extends Activity {
 
          db.addNewContent(OB_name,str1,str2);
 
-         Intent intent = new Intent(getApplicationContext(), ListViewLoader.class);
+         Intent intent = new Intent(getApplicationContext(), ListViewLoaderOne.class);
          startActivity(intent);
     }
 
@@ -48,7 +48,7 @@ public class ContentActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.content, menu);
+        getMenuInflater().inflate(R.menu.get_uti_two_menu, menu);
         return true;
     }
     
@@ -58,7 +58,7 @@ public class ContentActivity extends Activity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 //need to create a bundle to return to selected object
-                Intent intent = new Intent(getApplicationContext(), ListViewLoader.class);
+                Intent intent = new Intent(getApplicationContext(), ListViewLoaderOne.class);
                 startActivity(intent);
                 //NavUtils.navigateUpFromSameTask(this);
                 return true;

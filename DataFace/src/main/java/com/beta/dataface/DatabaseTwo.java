@@ -19,16 +19,16 @@ public class DatabaseTwo extends SQLiteOpenHelper
     private SQLiteDatabase sqLiteDatabase;
 
     private static final int DATABASE_VER = 1;
-    private static final String DATABASE_NAME = "objectcontent";
+    private static final String DATABASE_NAME = "databasetwo";
     //table columns
 
     public static final class CUBES implements BaseColumns {
         private CUBES() {}
-        public static final String TABLE_NAME = "content";
+        public static final String TABLE_NAME = "tabletwo";
         public static final String KEY_ID = "_id";
         public static final String KEY_PARENT = "parent";
-        public static final String KEY_OBNAME = "cubename";
-        public static final String KEY_CONTENT = "cube";
+        public static final String KEY_OBNAME = "objecttwo";
+        public static final String KEY_CONTENT = "contenttwo";
     }
     public DatabaseTwo(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VER);
@@ -75,20 +75,20 @@ public class DatabaseTwo extends SQLiteOpenHelper
     }
     public Cursor getColumnsWhere(String WHERE){
         SQLiteDatabase db = this.getReadableDatabase();
-        //SELECT * FROM content WHERE parent="foo";
+        //SELECT * FROM get_uti_two_menu WHERE parent="foo";
         return db.query(CUBES.TABLE_NAME,null,"parent='" + WHERE + "'",null,null,null,null,null);
 
     }
 
 
-    ContentConstructor getSingleObject(int id){
+    ConstructorTwo getSingleObject(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(CUBES.TABLE_NAME, new String[] {"_id " , CUBES.KEY_PARENT,CUBES.KEY_OBNAME,CUBES.KEY_CONTENT}, CUBES.KEY_ID + "=?",
                new String[] { String.valueOf(id)}, null, null, null, null);
         if(cursor != null)
             cursor.getCount();
         cursor.moveToFirst();
-        ContentConstructor con = new ContentConstructor(Integer.parseInt(cursor.getString(0)),
+        ConstructorTwo con = new ConstructorTwo(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2),cursor.getString(3));
         db.close();
         return con;

@@ -4,8 +4,8 @@
     <dataSet config="main" >
         <source path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res" >
             <file
-                name="content"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/content.xml"
+                name="text_view_two"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/text_view_two.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -14,38 +14,23 @@
                 qualifiers=""
                 type="menu" />
             <file
-                name="list_child_menu"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_child_menu.xml"
+                name="get_uti_two_menu"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/get_uti_two_menu.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                name="list_content"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_content.xml"
+                name="list_view_loader_two_menu"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_view_loader_two_menu.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                name="add_new_object"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/add_new_object.xml"
+                name="text_view_one"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/text_view_one.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                name="list_handler"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/list_handler.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="view_content_list"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/view_content_list.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="easy_list"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/easy_list.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="answer"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/answer.xml"
+                name="get_uti_one_menu"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/menu/get_uti_one_menu.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -114,41 +99,31 @@
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
-                <string name="title_activity_list_content" >Content
+                <string name="list_view_loader_one_string" >List View One
                 </string>
                 <string name="ob_name" >Object Name
                 </string>
-                <string name="title_activity_list_child" >Child
+                <string name="get_user_text_input_two_string" >Text Input Two
                 </string>
-                <string name="title_activity_add_new_object" >Add Object
+                <string name="list_view_loader_two_string" >List View Two
                 </string>
-                <string name="content_add" >Add Content
+                <string name="content_add" >Add new Content
                 </string>
-                <string name="button_send" >Learning Objects
+                <string name="get_user_input_one_string" >Text Input One
                 </string>
-                <string name="title_activity_view_content_list" >ViewContentListActivity
+                <string name="text_view_two_string" >Text View Two
                 </string>
-                <string name="title_activity_list_handler" >Object List
+                <string name="app_name" >Object Learning
                 </string>
-                <string name="app_name" >DataFace
-                </string>
-                <string name="title_activity_content" >ContentActivity
-                </string>
-                <string name="ob_con" >Contents
+                <string name="ob_con" >Object Contents
                 </string>
                 <string name="content_discard" >Delete Object
                 </string>
-                <string name="hello_world" >Hello world!
+                <string name="text_view_one_string" >Text View One
                 </string>
                 <string name="ob_send" >Submit new Object
                 </string>
-                <string name="title_activity_easy_list" >EasyListActivity
-                </string>
-                <string name="destroy_db" >Destroy DB
-                </string>
-                <string name="child" >Child Activity
-                </string>
-                <string name="title_activity_answer" >AnswerActivity
+                <string name="child" >Object Child Activity
                 </string>
             </file>
             <file
@@ -192,38 +167,23 @@
                 qualifiers="mdpi"
                 type="drawable" />
             <file
-                name="content_activity"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/content_activity.xml"
+                name="get_uti_two"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/get_uti_two.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="list_child"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_child.xml"
+                name="text_view_two"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/text_view_two.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="list_activity_main"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_activity_main.xml"
+                name="get_uti_one"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/get_uti_one.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="list_content_activity"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/list_content_activity.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="child_activity"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/child_activity.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="add_new_object"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/add_new_object.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="view_content_list_activity"
-                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/view_content_list_activity.xml"
+                name="text_view_one"
+                path="/home/trentonknight/AndroidStudioProjects/DataFaceProject/DataFace/src/main/res/layout/text_view_one.xml"
                 qualifiers=""
                 type="layout" />
             <file

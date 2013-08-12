@@ -1,18 +1,14 @@
 package com.beta.dataface;
 
 
-import android.*;
 import android.R;
 import android.app.ListActivity;
 import android.app.LoaderManager;
-import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,19 +19,17 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
 
-import org.w3c.dom.Comment;
-
 /**
  * Created by trentonknight on 8/3/13.
  */
-public class ListViewLoader extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor>{
+public class ListViewLoaderOne extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor>{
 
     SimpleCursorAdapter mAdapter;
 
-    static final String[] PROJECTION = new String[] {DatabaseH.KEYS.KEY_ID,
-            DatabaseH.KEYS.KEY_OBNAME};
-    static final String SELECTION = "((" + DatabaseH.KEYS.KEY_OBNAME +
-            DatabaseH.KEYS.KEY_CONTENT+ " != '' ))";
+    static final String[] PROJECTION = new String[] {DatabaseOne.KEYS.KEY_ID,
+            DatabaseOne.KEYS.KEY_OBNAME};
+    static final String SELECTION = "((" + DatabaseOne.KEYS.KEY_OBNAME +
+            DatabaseOne.KEYS.KEY_CONTENT+ " != '' ))";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -49,9 +43,9 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
         root.addView(progressBar);
 
 
-        final String[] fromColumns = {DatabaseH.KEYS.KEY_OBNAME};
+        final String[] fromColumns = {DatabaseOne.KEYS.KEY_OBNAME};
         final int[] toViews = {android.R.id.text1};
-        final DatabaseH db = new DatabaseH(this);
+        final DatabaseOne db = new DatabaseOne(this);
         db.onOpen(db.getReadableDatabase());
 
         final Cursor data = db.getAllColumns();
@@ -77,7 +71,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         // Now create and return a CursorLoader that will take care of
         // creating a Cursor for the data being displayed.
-        return new CursorLoader(ListViewLoader.this, null,
+        return new CursorLoader(ListViewLoaderOne.this, null,
                 PROJECTION, SELECTION, null, null);
     }
 
@@ -103,7 +97,7 @@ public class ListViewLoader extends ListActivity implements LoaderManager.Loader
     }
      public void passDataToTheChild(int position){
 
-        Intent intent = new Intent(this, ListChildActivity.class);
+        Intent intent = new Intent(this, TextViewOne.class);
         Bundle bundle = new Bundle();
         bundle.putInt("position", position);
         intent.putExtras(bundle);

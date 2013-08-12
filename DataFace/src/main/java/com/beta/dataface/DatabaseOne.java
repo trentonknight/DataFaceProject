@@ -14,22 +14,22 @@ import java.util.List;
 /**
  * Created by trentonknight on 7/24/13.
  */
-public class DatabaseH extends SQLiteOpenHelper{
+public class DatabaseOne extends SQLiteOpenHelper{
 
     private SQLiteDatabase sqLiteDatabase;
 
     private static final int DATABASE_VER = 1;
-    private static final String DATABASE_NAME = "learning";
+    private static final String DATABASE_NAME = "databaseone";
     //table columns
 
  public static final class KEYS implements BaseColumns{
     private KEYS() {}
-    public static final String TABLE_NAME = "objects";
+    public static final String TABLE_NAME = "tableone";
     public static final String KEY_ID = "_id";
-    public static final String KEY_OBNAME = "objectName";
-    public static final String KEY_CONTENT = "content";
+    public static final String KEY_OBNAME = "objectone";
+    public static final String KEY_CONTENT = "contentone";
  }
-    public DatabaseH(Context context){
+    public DatabaseOne(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VER);
     }
     //Creating Tables
@@ -57,24 +57,24 @@ public class DatabaseH extends SQLiteOpenHelper{
 
 
     //add new contact
-    public void addObject(LittleConstructor constructObject){
+    public void addObject(ConstructorOne constructObject){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEYS.KEY_OBNAME, constructObject.getOB());//object name
-        values.put(KEYS.KEY_CONTENT, constructObject.getContent());//inside content for object
+        values.put(KEYS.KEY_CONTENT, constructObject.getContent());//inside get_uti_two_menu for object
         //insert row
         db.insert(KEYS.TABLE_NAME, null, values);
         db.close();
     }
-    LittleConstructor getSingleObject(int id){
+    ConstructorOne getSingleObject(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(KEYS.TABLE_NAME, new String[] {"_id " , KEYS.KEY_OBNAME,KEYS.KEY_CONTENT}, KEYS.KEY_ID + "=?",
                 new String[] { String.valueOf(id)}, null, null, null, null);
         if(cursor != null)
             cursor.getCount();//refreshes cursor, how I don't know just yet
             cursor.moveToFirst();
-            LittleConstructor con = new LittleConstructor(Integer.parseInt(cursor.getString(0)),
+            ConstructorOne con = new ConstructorOne(Integer.parseInt(cursor.getString(0)),
             cursor.getString(1), cursor.getString(2));
         db.close();
         return con;

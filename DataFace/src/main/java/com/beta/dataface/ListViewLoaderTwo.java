@@ -4,10 +4,10 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
 
-public class ViewContentListActivity extends ListActivity{
+public class ListViewLoaderTwo extends ListActivity{
     SimpleCursorAdapter mAdapter;
     public static int position = 0;
 
@@ -65,7 +65,7 @@ public class ViewContentListActivity extends ListActivity{
 
     public void passDataToTheChild(int position){
 
-        Intent intent = new Intent(this, ContentTextAreaActivity.class);
+        Intent intent = new Intent(this, TextViewTwo.class);
         Bundle bundle = new Bundle();
         bundle.putInt("position", position);
         intent.putExtras(bundle);
@@ -84,7 +84,7 @@ public class ViewContentListActivity extends ListActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.view_content_list, menu);
+        getMenuInflater().inflate(R.menu.list_view_loader_two_menu, menu);
         return true;
     }
     
@@ -100,7 +100,7 @@ public class ViewContentListActivity extends ListActivity{
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpFromSameTask(this);
+                NavUtils.navigateUpTo(this,getParentActivityIntent());
                 return true;
         }
         return super.onOptionsItemSelected(item);

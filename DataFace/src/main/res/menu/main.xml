@@ -3,5 +3,18 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/content_add"
+          android:icon="@drawable/content_add"
+          android:title="@string/content_add"
+          android:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/view_as_list"
+          android:icon="@drawable/view_as_list"
+          android:title="View List"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/content_discard"
+          android:icon="@drawable/content_discard"
+          android:title="@string/content_discard"
+          android:showAsAction="ifRoom"/>
 
 </menu>
