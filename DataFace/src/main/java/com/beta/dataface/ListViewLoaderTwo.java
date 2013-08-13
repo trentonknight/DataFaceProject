@@ -41,11 +41,11 @@ public class ListViewLoaderTwo extends ListActivity{
         ViewGroup root = (ViewGroup) findViewById(android.R.id.content);
         root.addView(progressBar);
 
-        final String[] fromColumns = {DatabaseTwo.CUBES.KEY_OBNAME};
-        final int[] toViews = {android.R.id.text1};
+        String[] fromColumns = {DatabaseTwo.CUBES.KEY_OBNAME};
+        int[] toViews = {android.R.id.text1};
 
 
-        final Cursor data = db.getColumnsWhere(OB_name);
+        Cursor data = db.getColumnsWhere(OB_name);
 
 
         mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
@@ -100,7 +100,11 @@ public class ListViewLoaderTwo extends ListActivity{
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpTo(this,getParentActivityIntent());
+                //NavUtils.navigateUpTo();
+                Intent intent = new Intent(getApplicationContext(),ListViewLoaderOne.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                //NavUtils.navigateUpFromSameTask(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);

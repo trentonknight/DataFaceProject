@@ -2,12 +2,18 @@ package com.beta.dataface;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 
 public class MainActivity extends Activity {
+
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +21,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_main);
-
+        addTutorialImages();
+    }
+    public void addTutorialImages(){
+       Resources res = getResources();
+       Drawable drawable = res.getDrawable(R.drawable.drawing);
+       image = (ImageView) findViewById(R.id.imageView);
+       image.setImageResource(R.drawable.drawing);
     }
     public void newObject(){
         Intent intent = new Intent(this, GetUserTextInputOne.class);

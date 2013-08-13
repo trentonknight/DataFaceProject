@@ -57,10 +57,10 @@
         <activity
             android:name=".ListViewLoaderTwo"
             android:label="@string/list_view_loader_two_string"
-            android:parentActivityName="com.beta.dataface.ListViewLoader" >
+            android:parentActivityName="com.beta.dataface.TextViewOne" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.beta.dataface.ListViewLoader" />
+                android:value="com.beta.dataface.TextViewOne" />
         </activity>
         <activity
             android:name=".TextViewTwo"

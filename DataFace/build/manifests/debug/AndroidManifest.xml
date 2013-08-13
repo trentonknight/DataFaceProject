@@ -22,8 +22,8 @@
         <activity android:label="@string/get_user_text_input_two_string" android:name="com.beta.dataface.GetUserTextInputTwo" android:parentActivityName="com.beta.dataface.ListChildActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListChildActivity"/>
         </activity>
-        <activity android:label="@string/list_view_loader_two_string" android:name="com.beta.dataface.ListViewLoaderTwo" android:parentActivityName="com.beta.dataface.ListViewLoader">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ListViewLoader"/>
+        <activity android:label="@string/list_view_loader_two_string" android:name="com.beta.dataface.ListViewLoaderTwo" android:parentActivityName="com.beta.dataface.TextViewOne">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.TextViewOne"/>
         </activity>
         <activity android:label="@string/text_view_two_string" android:name="com.beta.dataface.TextViewTwo" android:parentActivityName="com.beta.dataface.ViewContentListActivity">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.beta.dataface.ViewContentListActivity"/>

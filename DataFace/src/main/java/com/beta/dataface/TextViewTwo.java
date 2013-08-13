@@ -1,10 +1,10 @@
 package com.beta.dataface;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 import android.widget.TextView;
 
 public class TextViewTwo extends Activity {
@@ -69,7 +69,10 @@ public class TextViewTwo extends Activity {
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpFromSameTask(this);
+                //NavUtils.navigateUpFromSameTask(this);
+                Intent intent = new Intent(getApplicationContext(),ListViewLoaderOne.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
