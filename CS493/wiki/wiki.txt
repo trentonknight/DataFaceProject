@@ -1,0 +1,43 @@
+Welcome to the DataFaceProject wiki!
+===================================
+
+Jason Mansfield <trentonknight@gmail.com>
+ver 1.0
+
+== An Original approach to study
+To some individuals memorizing trivial facts comes naturally. Unfortunately, for myself I have the tendency to lose any information I do not deem critical. I have arrived at the conclusion that the only way I can remember any trivial subject is by somehow organizing it in a way that gives it a purpose in my life. One particular approach which caught my attention is called Chunking <<bor>>. An example of chunking might be the method you use to remember phone numbers. Memorizing telephone numbers is easy because you already use chucking as a approach.
+
+.telephony chunk
+[options="header,footer"]
+|=======================
+| Country calling code | Numbering Plan Area Code | Central Office code | Subscriber Number 
+|1 |757 |555 |1234 
+|=======================
+
+== OK? So what is DataFace
+To be honest DataFace is currently an almost meaningless application. I am still in the very beginning stages of creating the most basic aspects of this app:
+
+.So far DataFace has
+* two SQLite databases
+* two ListViews 
+
+and not much else. However, there is a game plan. The next steps will be to implement the ability to import csv or xml to generate Objects. I would like to eventually add the ability to use LaTeX or MathML, possible using MathJax? Tags and keyword search should also be implemented. Additionally, I will need to add a much more graphical view of the Objects. This view should show the parent Objects and all the children Objects associated to each:
+
+[graphviz]
+---------------------------------------------------------------------
+graph Objects{P1 -- C1[type=s]; P1 -- C2[type=s]; P1 -- C3[type=s]}
+---------------------------------------------------------------------
+
+.The Flow Chart of Destiny
+A few months ago I had to study for a test. Previously, I had been using a variety of flash cards such as Anki. The flash card approach was an improvement over attempting to re-read material that would instantaneously lead me to day-dreaming or a coma like state. However, I felt that the problem I continuously had was an inability to group the questions together as a whole. Instead of creating more flash cards, this time I created a flow chart using LaTeX. To my surprise with only one afternoon of study my score increased dramatically. This finding leads me to believe that Objectifying objects allows you to chunk even useless data in a way that gives you mental ownership of these little pieces of information. 
+
+.DataFace goals
+My current goal for DataFace is to add graphics and usability to the layout. I would like to create an environment where the student may visualize the connection between each child and its parent, as well as Objects connected to each other. The person studying won't have to search through a book or a pile of flash cards to find the correlation between two subject matters. Instead all the information to all the subjects will be connected in one big organized container. 
+
+
+
+
+.Bibliography
+[bibliography]
+- [[[bor]]] Bor, Daniel (2012). The ravenous brain : how the new science of consciousness
+explains our insatiable search for meaning. New York: Basic Books. isbn:046502047X.

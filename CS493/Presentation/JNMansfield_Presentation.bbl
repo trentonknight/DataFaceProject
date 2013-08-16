@@ -1,0 +1,115 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{Activity}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{A}
+    \field{labelyear}{2013}
+    \field{title}{Activity}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/guide/components/activities.html
+    \endverb
+  \endentry
+
+  \entry{ads}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{a}
+    \field{labelyear}{2013}
+    \field{title}{android.database.sqlite}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/database/sqlite/package-summary.html
+    \endverb
+  \endentry
+
+  \entry{Intent}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{I}
+    \field{labelyear}{2013}
+    \field{title}{Intent}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/content/Intent.html
+    \endverb
+  \endentry
+
+  \entry{ListView}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{L}
+    \field{labelyear}{2013}
+    \field{title}{ListView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/widget/ListView.html
+    \endverb
+  \endentry
+
+  \entry{sqlite}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{Saving Data in SQL Databases}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/data-storage/databases.html
+    \endverb
+  \endentry
+
+  \entry{SimpleCursorAdapter}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{SimpleCursorAdapter}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/support/v4/widget/SimpleCursorAdapter.html
+    \endverb
+  \endentry
+
+  \entry{View}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{V}
+    \field{labelyear}{2013}
+    \field{title}{View}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/view/View.html
+    \endverb
+  \endentry
+
+\endrefsection
+\endinput
+

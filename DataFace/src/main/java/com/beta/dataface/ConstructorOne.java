@@ -4,7 +4,7 @@ package com.beta.dataface;
  * Created by trentonknight on 7/24/13.
  */
 public class ConstructorOne {
-
+///This is a basic constructor for the parent Object
     int _id;
     String _objectName;
     String _content;

@@ -4,7 +4,7 @@ package com.beta.dataface;
  * Created by trentonknight on 8/11/13.
  */
 public class ConstructorTwo {
-
+///This is a basic constructor for the child items
 int _id;
     String _parent;
     String _cubename;
