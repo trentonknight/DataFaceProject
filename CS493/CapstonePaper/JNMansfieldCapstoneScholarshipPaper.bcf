@@ -291,17 +291,20 @@
   <!-- CITATION DATA -->
   <!-- section 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">JNMansfield_Presentation.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">JNMansfieldCapstoneScholarshipPaper.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey>Activity</bcf:citekey>
-    <bcf:citekey>View</bcf:citekey>
-    <bcf:citekey>R</bcf:citekey>
-    <bcf:citekey>Layout</bcf:citekey>
-    <bcf:citekey>Intent</bcf:citekey>
-    <bcf:citekey>ListView</bcf:citekey>
+    <bcf:citekey>bor2012the</bcf:citekey>
+    <bcf:citekey>sep-connectionism</bcf:citekey>
+    <bcf:citekey>sep-memory</bcf:citekey>
     <bcf:citekey>sqlite</bcf:citekey>
-    <bcf:citekey>ads</bcf:citekey>
+    <bcf:citekey>ListView</bcf:citekey>
+    <bcf:citekey>gridview</bcf:citekey>
+    <bcf:citekey>Intent</bcf:citekey>
+    <bcf:citekey>Bundle</bcf:citekey>
     <bcf:citekey>SimpleCursorAdapter</bcf:citekey>
+    <bcf:citekey>Ravi</bcf:citekey>
+    <bcf:citekey>vogella</bcf:citekey>
+    <bcf:citekey>fragments</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

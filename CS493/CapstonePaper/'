@@ -54,7 +54,7 @@ twoside, % Shifts odd pages to the left for easier reading when printed, can be 
 captions=tableheading,
 index=totoc,
 hyperref]{labbook}
-
+\usepackage[framemethod=tikz]{mdframed}
 \usepackage[bottom=10em]{geometry} % Reduces the whitespace at the bottom of the page so more text can fit
 
 \usepackage[english]{babel} % English language
@@ -81,10 +81,13 @@ hyperref]{labbook}
 style=authoryear-comp,
 natbib=true,
 ]{biblatex}
-\addbibresource{JNMansfield_Presentation.bib}
+\addbibresource{JNMansfieldCapstoneScholarshipPaper.bib}
 
 \usepackage{setspace}
 \usepackage{url}
+\usetikzlibrary{shadows,arrows}
+\tikzstyle{card}=[draw, fill=yellow!20, text width=6.0em, text centered,
+	  minimum height=3.0em,drop shadow]
 
 \addtokomafont{title}{\Huge\color{green!40!brown!80}} % Titles in custom blue color
 \addtokomafont{chapter}{\color{green!40!brown!80}} % Lab dates in olive green
@@ -150,12 +153,11 @@ pdfview=FitB]{hyperref}
 % Template: \newexperiment{<abbrev>}[<short form>]{<long form>}
 % <abbrev> is the reference to use later in the .tex file in \experiment{}, the <short form> is only used in the table of contents and running title - it is optional, <long form> is what is printed in the lab book itself
 
-\newexperiment{exp1}[The concept for DataFace]{A quick review about the concepts which are forming the DataFace application}
-\newexperiment{exp2}[A review of the Android API]{This is a quick review of the portions of the Android API used in this project}
-\newexperiment{exp3}[SQLite3]{Review of the SQLite3 database on android}
-\newexperiment{exp4}[Some Points]{Some important point to look for}
-\newexperiment{exp5}[A Walkabout]{A walk through user input}
-
+\newexperiment{exp1}[Hello DataFace]{A Chunking Application for memory}
+\newexperiment{exp2}[Why Create a new approach?]{The background theory behind the DataFace application}
+\newexperiment{exp3}[Research]{A summary of my findings}
+\newexperiment{exp4}[Where is DataFace now?] {The current state of the DataFace application}
+\newexperiment{exp5}[Appendices] {The current DataFace Source Code}
 
 
 %----------------------------------------------------------------------------------------
@@ -166,11 +168,10 @@ pdfview=FitB]{hyperref}
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title{\textcap{\shadowtext{CS493}\\
-\textaut{\small{Regis University}}	
+\title{\textcap{\shadowtext{Regis University}\\
+\textaut{\small{CS493}}	
 \textaut{\small{Senior Capstone}}\\		
-\textaut{\shadowtext{Presentation of DataFace}}}\\
-\textaut{\small{handout}}\\		
+\textaut{\shadowtext{Scholarship Paper}}}
 }
 
 \author{
@@ -182,6 +183,16 @@ The Object Based Study Application % Your degree
 \date{\today} % No date by default, add \today if you wish to include the publication date
 
 \maketitle % Title page
+\chapter*{abstract}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1, 
+		  linecolor=green!40!brown!80,outerlinewidth=.9,
+		    innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{0.5\textwidth}
+The DataFace project is a Android application trying to become a Cheat Sheet or Flow Chart of sorts. This essay describes my attempt to create a application which provides a method for an individual to naturally memorize information using a technique similar to chunking. 
+\end{minipage}
+\end{center}
+\end{mdframed}
 
 \printindex
 \tableofcontents % Table of contents
@@ -196,73 +207,36 @@ The Object Based Study Application % Your degree
 
 \labday{\today}
 %-----------------------------------------
-
 \experiment{exp1}
-To begin I would like to ask you to take a look at my project on the GITHUB page here:\\
-\href{https://github.com/trentonknight/DataFaceProject/wiki/DataFace:-An-attempt-to-create-a-Object-based-learning-tool.}{DataFace wiki}
 \begin{onehalfspace}
-The below is an example of a constructor. DataFace uses two constructors: ConstructorOne and ConstructorTwo.
+To some individuals memorizing trivial facts comes naturally. Unfortunately, for myself I have the tendency to lose any information I do not deem critical. I have arrived at the conclusion that the only way I can remember any trivial subject is by somehow organizing it in a way that gives it a purpose in my life. One particular approach which caught my attention is called Chunking~\citep{bor2012the}. An example of chunking might be the method you use to remember phone numbers. Memorizing telephone numbers is easy because you already use chucking as an approach:\\
 \end{onehalfspace}
-\begin{minted}{java}
-public Bicycle(int startCadence, int startSpeed, int startGear) {
-gear = startGear;
-cadence = startCadence;
-speed = startSpeed;
-}
-\end{minted}
-
-Therefore, to create a new Bicycle:
-
-\begin{minted}{java}
-Bicycle myBike = new Bicycle(30, 0, 8);
-\end{minted}
-
-\experiment{exp2}
-The following API Items may be covered:
-
-\begin{itemize}
-\item Activities~\citep{Activity}
-\item Views ~\citep{View}
-\item Layouts ~\citep{R,Layout}
-\item Intents ~\citep{Intent}
-\item ListView ~\citep{ListView}
-\end{itemize}
+\begin{tabular}{|c|c|c|c|}\hline
+Calling code & Area Code & Central Office Code & Subscriber Number\\\hline
+1 & 757 & 555 & 1234\\\hline
+\end{tabular}
 \begin{onehalfspace}
-Where is Main()? AH HA! Android apps have NO Main function, just a bunch of Activities! Instead Activities are stacked and play off of each other.
+In previous months I had been using various Flash Card programs such as Anki. The problem I began having was correlating items together. For example I might be studying a piece of history in while a significant event happens in 1851. Seven cards later an additional event happens in 1951. It was difficult for me to divide the two event when attempting to recall. However, in a cheat sheet, time line or other method all the dates are in front of you:
 \end{onehalfspace}
-
-\experiment{exp3}
-\begin{itemize}
-\item SQLite3 ~\citep{sqlite}
-\item android.database.sqlite ~\citep{ads}
-\item SimpleCursorAdapter ~\citep{SimpleCursorAdapter}
-\end{itemize}
-I will try to demonstraight the two SQLite databases and walk through the various portions of the code to show its effects on the ListView.
-\experiment{exp4}
-Here are some points to look for which will help put all these pieces together:
-\begin{itemize}
-\item Activities have lifecycles with three states.
-\begin{enumerate}
-\item Resumed: in the foreground
-\item Paused: The current activity is coved by another partially in a transparent state.
-\item Stopped: Activity is in the background and no longer visible.
-\end{enumerate}
-\item Intents launch Activities.
-\item Bundles pass data between Activities.
-\item The SimpleCursorAdapter is a specialized adapter that uses the database cursor to map columns in a TextView or ImageView.
-\item The latest DataFace apk can be found here: \href{https://github.com/trentonknight/DataFaceProject/tree/master/DataFace/build/apk}{DataFace-release-unsigned}
-\end{itemize}
-\experiment{exp5}
-The following is a Walkabout user input:
-\begin{enumerate}
-\item GetUserTextInputOne gets user input with 2 * EditText and a Button. 
-\item ConstructorOne is called by GetUserTextInput and two strings are sent to the DataBaseOne
-\item DataBaseOne adds the two strings to the KEY\_OBNAME and KEY\_CONTENT or objectone and contentone in the databaseone table tableone.
-\end{enumerate}
-\begin{onehalfspace}
-For now all data is viewed by the use of the SimpleCursorAdapter passing all the columns to a ListView. There is a second database which hold the second table, similar queries are made with some small differences.
-\end{onehalfspace}
+\begin{figure}[H]
+\begin{tikzpicture}
+\node[card](card1){event one\\1851};
+\node[card](card2)at (4,0) {event two\\1951};
+\end{tikzpicture}
+\label{fig:flashcards}
+\end{figure}
 \clearpage
 \printbibliography
+\clearpage
+\chapter*{Appendix}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1, 
+		  linecolor=green!40!brown!80,outerlinewidth=.9,
+		    innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{0.5\textwidth}
+The Appendix
+\end{minipage}
+\end{center}
+\end{mdframed}
 
 \end{document}

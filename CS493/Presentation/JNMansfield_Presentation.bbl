@@ -58,6 +58,19 @@
     \endverb
   \endentry
 
+  \entry{Layout}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{L}
+    \field{labelyear}{2013}
+    \field{title}{Layouts}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/guide/topics/ui/declaring-layout.html
+    \endverb
+  \endentry
+
   \entry{ListView}{misc}{}
     \list{organization}{1}{%
       {Android Open Source Project}%
@@ -68,6 +81,19 @@
     \field{year}{2013}
     \verb{url}
     \verb http://developer.android.com/reference/android/widget/ListView.html
+    \endverb
+  \endentry
+
+  \entry{R}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{R}
+    \field{labelyear}{2013}
+    \field{title}{R}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/R.html
     \endverb
   \endentry
 

@@ -18,7 +18,7 @@ public class DatabaseOne extends SQLiteOpenHelper{
 
     private SQLiteDatabase sqLiteDatabase;
 
-    //** This is the first database for created the parent object
+    //** This is the first database for created the parent objectadds
 
     private static final int DATABASE_VER = 1;
     private static final String DATABASE_NAME = "databaseone";

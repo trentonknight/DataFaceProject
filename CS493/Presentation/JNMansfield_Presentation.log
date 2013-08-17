@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.7)  15 AUG 2013 20:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.7)  15 AUG 2013 21:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -993,21 +993,21 @@ Package biblatex Warning: 'babel' detected but 'csquotes' missing.
 (./JNMansfield_Presentation.aux)
 \openout1 = `JNMansfield_Presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 163.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplj.fd
@@ -1081,7 +1081,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 162.
+(lastpage)             ! on input line 163.
 runsystem(pygmentize -S default -f latex > JNMansfield_Presentation.pyg)...exec
 uted.
 
@@ -1095,10 +1095,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'JNMansfield_Presentation.bbl' found.
  (./JNMansfield_Presentation.bbl)
-Package biblatex Info: Reference section=0 on input line 162.
-Package biblatex Info: Reference segment=0 on input line 162.
+Package biblatex Info: Reference section=0 on input line 163.
+Package biblatex Info: Reference segment=0 on input line 163.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 162.
+Package hyperref Info: Link coloring ON on input line 163.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -1108,15 +1108,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 162.
-LaTeX Info: Redefining \pageref on input line 162.
-LaTeX Info: Redefining \nameref on input line 162.
+LaTeX Info: Redefining \ref on input line 163.
+LaTeX Info: Redefining \pageref on input line 163.
+LaTeX Info: Redefining \nameref on input line 163.
 
 (./JNMansfield_Presentation.out) (./JNMansfield_Presentation.out)
 \@outlinefile=\write7
 \openout7 = `JNMansfield_Presentation.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 162.
+LaTeX Info: Redefining \microtypecontext on input line 163.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1130,69 +1130,69 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-LaTeX Font Info:    Try loading font information for T1+fvs on input line 184.
+LaTeX Font Info:    Try loading font information for T1+fvs on input line 185.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvs.fd
 File: t1fvs.fd 2004/09/07 scalable font definitions for T1/fvs.
 )
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 9.41699pt on input line 184.
+(Font)              scaled to size 9.41699pt on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/fvs/b/n' tried instead on input line 184.
+(Font)              Font shape `T1/fvs/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 9.41699pt on input line 184.
+(Font)              scaled to size 9.41699pt on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/fvs/b/n' tried instead on input line 184.
+(Font)              Font shape `T1/fvs/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 21.3968pt on input line 184.
+(Font)              scaled to size 21.3968pt on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/fvs/b/n' tried instead on input line 184.
+(Font)              Font shape `T1/fvs/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 17.83641pt on input line 184.
+(Font)              scaled to size 17.83641pt on input line 185.
 
 
-Package xcolor Warning: Incompatible color definition on input line 184.
+Package xcolor Warning: Incompatible color definition on input line 185.
 
 LaTeX Font Info:    Font shape `T1/fvs/bx/n' in size <10> not available
-(Font)              Font shape `T1/fvs/b/n' tried instead on input line 184.
+(Font)              Font shape `T1/fvs/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 8.6pt on input line 184.
+(Font)              scaled to size 8.6pt on input line 185.
 
-Package xcolor Warning: Incompatible color definition on input line 184.
+Package xcolor Warning: Incompatible color definition on input line 185.
 
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 184.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 185.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 184
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 185
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 184
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 185
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 184
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 185
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 184
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 185
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-<android.png, id=24, 446.6286pt x 446.6286pt>
+<android.png, id=28, 446.6286pt x 446.6286pt>
 File: android.png Graphic file (type png)
  <use android.png>
-Package pdftex.def Info: android.png used on input line 184.
+Package pdftex.def Info: android.png used on input line 185.
 (pdftex.def)             Requested size: 223.31375pt x 223.31375pt.
  [1
 
@@ -1203,13 +1203,13 @@ Package pdftex.def Info: android.png used on input line 184.
 ]
 No file JNMansfield_Presentation.ind.
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
-6.
+7.
 (./JNMansfield_Presentation.toc)
 \tf@toc=\write8
 \openout8 = `JNMansfield_Presentation.toc'.
 
 LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 187.
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 188.
  [3
 
 
@@ -1222,16 +1222,52 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              `scrbook' soon .
 
 LaTeX Font Info:    Font shape `T1/fvs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/fvs/b/n' tried instead on input line 199.
+(Font)              Font shape `T1/fvs/b/n' tried instead on input line 200.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.384pt on input line 199.
-LaTeX Font Info:    Try loading font information for OMS+pplj on input line 207
+(Font)              scaled to size 12.384pt on input line 200.
+\openout4 = `JNMansfield_Presentation.pyg'.
+
+runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
+= " -o JNMansfield_Presentation.out.pyg JNMansfield_Presentation.pyg)...execute
+d.
+
+(./JNMansfield_Presentation.out.pyg
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.63605pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fvm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/fvm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 9.63605pt on input line 2.
+)
+runsystem(rm JNMansfield_Presentation.out.pyg)...executed.
+
+runsystem(rm JNMansfield_Presentation.pyg)...executed.
+
+\openout4 = `JNMansfield_Presentation.pyg'.
+
+runsystem(pygmentize -l java -f latex -F tokenmerge             -P "verboptions
+= " -o JNMansfield_Presentation.out.pyg JNMansfield_Presentation.pyg)...execute
+d.
+
+
+(./JNMansfield_Presentation.out.pyg)
+runsystem(rm JNMansfield_Presentation.out.pyg)...executed.
+
+runsystem(rm JNMansfield_Presentation.pyg)...executed.
+
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 224
 .
-LaTeX Font Info:    No file OMSpplj.fd. on input line 207.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 224.
+
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 207.
+(Font)              for symbol `textbullet' on input line 224.
 
 [4] [5] [6
 
@@ -1241,24 +1277,17 @@ LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 235.
- (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.63605pt on input line 235.
-
-
+ 
 AED: lastpage setting LastPage
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
  (./JNMansfield_Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `JNMansfield_Presentation.out' has not change
 d.
-(rerunfilecheck)             Checksum: 7E2A9B3C9623645B1A6452D6EA2B5B98;315.
+(rerunfilecheck)             Checksum: 91E34840D7E10100F2BBAE22BB244187;375.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1268,25 +1297,26 @@ Package logreq Info: Writing requests to 'JNMansfield_Presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16715 strings out of 493485
- 261477 string characters out of 3143527
- 603824 words of memory out of 3000000
- 19576 multiletter control sequences out of 15000+200000
- 64567 words of font info for 145 fonts, out of 3000000 for 9000
+ 16755 strings out of 493485
+ 262148 string characters out of 3143527
+ 604864 words of memory out of 3000000
+ 19599 multiletter control sequences out of 15000+200000
+ 65468 words of font info for 151 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,11n,45p,863b,1775s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,11n,45p,863b,1781s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-bera/fvsb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvsr8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on JNMansfield_Presentation.pdf (7 pages, 146484 bytes).
+type1/public/bera/fvmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvsb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/palatino/uplri8a.pfb>
+Output written on JNMansfield_Presentation.pdf (7 pages, 155454 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 41518 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 42038 words of extra memory for PDF output out of 42996 (max. 10000000)
 

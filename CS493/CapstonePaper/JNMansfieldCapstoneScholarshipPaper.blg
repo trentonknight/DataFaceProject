@@ -1,0 +1,18 @@
+[0] Config.pm:300> INFO - This is Biber 0.9.9
+[1] Config.pm:303> INFO - Logfile is 'JNMansfieldCapstoneScholarshipPaper.blg'
+[36] biber:145> INFO - === Sat Aug 17, 2013, 15:45:13
+[36] Biber.pm:271> INFO - Reading 'JNMansfieldCapstoneScholarshipPaper.bcf'
+[52] Biber.pm:586> INFO - Found 12 citekeys in bib section 0
+[59] Biber.pm:2585> INFO - Processing bib section 0
+[73] Biber.pm:2677> INFO - Looking for bibtex format file 'JNMansfieldCapstoneScholarshipPaper.bib' for section 0
+[75] bibtex.pm:829> INFO - Decoding LaTeX character macros into UTF-8
+[88] bibtex.pm:833> INFO - Finished Decoding LaTeX character macros into UTF-8
+[89] bibtex.pm:704> INFO - Found BibTeX data source 'JNMansfieldCapstoneScholarshipPaper.bib'
+[95] Utils.pm:168> WARN - Possible typo (case mismatch) between datasource keys: 'ListView' and 'listview' in file 'JNMansfieldCapstoneScholarshipPaper.bib'
+[131] Biber.pm:2480> INFO - Sorting list 'MAIN' keys
+[131] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[151] Biber.pm:2480> INFO - Sorting list 'SHORTHANDS' keys
+[152] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[162] bbl.pm:427> INFO - Writing 'JNMansfieldCapstoneScholarshipPaper.bbl' with encoding 'UTF-8'
+[163] bbl.pm:498> INFO - Output to JNMansfieldCapstoneScholarshipPaper.bbl
+[163] Biber.pm:106> INFO - WARNINGS: 1

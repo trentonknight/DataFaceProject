@@ -1,0 +1,217 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{bor2012the}{book}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=68b63202ddbb2e25fc0e3fba85382d66}{Bor}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=68b63202ddbb2e25fc0e3fba85382d66}{Bor}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+    }
+    \list{location}{1}{%
+      {New York}%
+    }
+    \list{publisher}{1}{%
+      {Basic Books}%
+    }
+    \strng{namehash}{68b63202ddbb2e25fc0e3fba85382d66}
+    \strng{fullhash}{68b63202ddbb2e25fc0e3fba85382d66}
+    \field{sortinit}{B}
+    \field{labelyear}{2012}
+    \field{isbn}{046502047X}
+    \field{title}{The ravenous brain : how the new science of consciousness explains our insatiable search for meaning}
+    \field{year}{2012}
+  \endentry
+
+  \entry{fragments}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{B}
+    \field{labelyear}{2013}
+    \field{title}{Building a Dynamic UI with Fragments}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/fragments/index.html
+    \endverb
+  \endentry
+
+  \entry{Bundle}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{B}
+    \field{labelyear}{2013}
+    \field{title}{Bundle}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/os/Bundle.html
+    \endverb
+  \endentry
+
+  \entry{sep-connectionism}{incollection}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=e3f3446cbf30c535702cb75d059c1c0e}{Garson}{G\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=e3f3446cbf30c535702cb75d059c1c0e}{Garson}{G\bibinitperiod}{James}{J\bibinitperiod}{}{}{}{}}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=d9b6284b7816d9e586e8af9a253ba08e}{Zalta}{Z\bibinitperiod}{Edward\bibnamedelima N.}{E\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{e3f3446cbf30c535702cb75d059c1c0e}
+    \strng{fullhash}{e3f3446cbf30c535702cb75d059c1c0e}
+    \field{sortinit}{G}
+    \field{labelyear}{2012}
+    \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+    \field{edition}{Winter 2012}
+    \field{howpublished}{\url{http://plato.stanford.edu/archives/win2012/entries/connectionism/}}
+    \field{title}{Connectionism}
+    \field{year}{2012}
+  \endentry
+
+  \entry{gridview}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{G}
+    \field{labelyear}{2013}
+    \field{title}{GridView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/widget/GridView.html
+    \endverb
+  \endentry
+
+  \entry{Intent}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{I}
+    \field{labelyear}{2013}
+    \field{title}{Intent}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/content/Intent.html
+    \endverb
+  \endentry
+
+  \entry{ListView}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{L}
+    \field{labelyear}{2013}
+    \field{title}{ListView}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/widget/ListView.html
+    \endverb
+  \endentry
+
+  \entry{sqlite}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{Saving Data in SQL Databases}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/training/basics/data-storage/databases.html
+    \endverb
+  \endentry
+
+  \entry{SimpleCursorAdapter}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{S}
+    \field{labelyear}{2013}
+    \field{title}{SimpleCursorAdapter}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/reference/android/support/v4/widget/SimpleCursorAdapter.html
+    \endverb
+  \endentry
+
+  \entry{sep-memory}{incollection}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=b8a77986ccc09698614b35578f1457bd}{Sutton}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=b8a77986ccc09698614b35578f1457bd}{Sutton}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=d9b6284b7816d9e586e8af9a253ba08e}{Zalta}{Z\bibinitperiod}{Edward\bibnamedelima N.}{E\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{b8a77986ccc09698614b35578f1457bd}
+    \strng{fullhash}{b8a77986ccc09698614b35578f1457bd}
+    \field{sortinit}{S}
+    \field{labelyear}{2012}
+    \field{booktitle}{The Stanford Encyclopedia of Philosophy}
+    \field{edition}{Winter 2012}
+    \field{howpublished}{\url{http://plato.stanford.edu/archives/win2012/entries/memory/}}
+    \field{title}{Memory}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Ravi}{misc}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=ad69aa9a6066041c382b789116680400}{Tamada}{T\bibinitperiod}{Ravi}{R\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=ad69aa9a6066041c382b789116680400}{Tamada}{T\bibinitperiod}{Ravi}{R\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{ad69aa9a6066041c382b789116680400}
+    \strng{fullhash}{ad69aa9a6066041c382b789116680400}
+    \field{sortinit}{T}
+    \field{labelyear}{2012}
+    \field{title}{Android SQLite Database Tutorial}
+    \field{year}{2012}
+    \verb{url}
+    \verb http://www.androidhive.info/2011/11/android-sqlite-database-tutorial/
+    \endverb
+  \endentry
+
+  \entry{vogella}{misc}{}
+    \name{labelname}{1}{}{%
+      {{uniquename=0,hash=f4613620d7a837540a63918891f1b7e3}{Vogel}{V\bibinitperiod}{Lars}{L\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{1}{}{%
+      {{uniquename=0,hash=f4613620d7a837540a63918891f1b7e3}{Vogel}{V\bibinitperiod}{Lars}{L\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{f4613620d7a837540a63918891f1b7e3}
+    \strng{fullhash}{f4613620d7a837540a63918891f1b7e3}
+    \field{sortinit}{V}
+    \field{labelyear}{2013}
+    \field{day}{6}
+    \field{month}{06}
+    \field{title}{Android SQLite Database and ContentProvider - Tutorial}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://www.vogella.com/articles/AndroidSQLite/article.html
+    \endverb
+  \endentry
+
+\endrefsection
+\endinput
+
