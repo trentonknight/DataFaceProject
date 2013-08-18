@@ -1,0 +1,50 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{Open}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{O}
+    \field{labelyear}{2013}
+    \field{title}{Open Distribution}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/distribute/open.html
+    \endverb
+  \endentry
+
+  \entry{play}{misc}{}
+    \list{organization}{1}{%
+      {Android Open Source Project}%
+    }
+    \field{sortinit}{Y}
+    \field{labelyear}{2013}
+    \field{title}{Your Apps On Google Play}
+    \field{year}{2013}
+    \verb{url}
+    \verb http://developer.android.com/distribute/index.html
+    \endverb
+  \endentry
+
+\endrefsection
+\endinput
+

@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Compact Laboratory Book
+% LaTeX Template
+% Version 1.0 (4/6/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Joan Queralt Gil (http://phobos.xtec.cat/jqueralt) using the labbook class by
+% Frank Kuster (http://www.ctan.org/tex-archive/macros/latex/contrib/labbook/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the labbook.cls file to be in the same directory as the
+% .tex file. The labbook.cls file provides the necessary structure to create the
+% lab book.
+%
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing lab book content.
+%
+% HOW TO USE THIS TEMPLATE 
+% Each day in the lab consists of three main things:
+%
+% 1. LABDAY: The first thing to put is the \labday{} command with a date in 
+% curly brackets, this will make a new section showing that you are working
+% on a new day.
+%
+% 2. EXPERIMENT/SUBEXPERIMENT: Next you need to specify what 
+% experiment(s) and subexperiment(s) you are working on with a 
+% \experiment{} and \subexperiment{} commands with the experiment 
+% shorthand in the curly brackets. The experiment shorthand is defined in the 
+% 'DEFINITION OF EXPERIMENTS' section below, this means you can 
+% say \experiment{pcr} and the actual text written to the PDF will be what 
+% you set the 'pcr' experiment to be. If the experiment is a one off, you can 
+% just write it in the bracket without creating a shorthand. Note: if you don't 
+% want to have an experiment, just leave this out and it won't be printed.
+%
+% 3. CONTENT: Following the experiment is the content, i.e. what progress 
+% you made on the experiment that day.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------                               
+
+\documentclass[fontsize=11pt, % Document font size
+paper=a4, % Document paper type
+twoside, % Shifts odd pages to the left for easier reading when printed, can be changed to oneside
+captions=tableheading,
+index=totoc,
+hyperref]{labbook}
+
+\usepackage[bottom=10em]{geometry} % Reduces the whitespace at the bottom of the page so more text can fit
+
+\usepackage[english]{babel} % English language
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[utf8]{inputenc} % Uses the utf8 input encoding
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage[osf]{mathpazo} % Palatino as the main font
+\linespread{1.05}\selectfont % Palatino needs some extra spacing, here 5% extra
+\usepackage[scaled=.88]{beramono} % Bera-Monospace
+\usepackage[scaled=.86]{berasans} % Bera Sans-Serif
+
+\usepackage{booktabs,array} % Packages for tables
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{graphicx} % Required for including images
+\usepackage{etoolbox}
+\usepackage[norule]{footmisc} % Removes the horizontal rule from footnotes
+\usepackage{lastpage} % Counts the number of pages of the document
+\usepackage{shadowtext}
+\usepackage{minted}
+\usepackage[backend=biber,
+style=authoryear-comp,
+natbib=true,
+]{biblatex}
+\addbibresource{JNMansfield_CapstoneProduct.bib}
+
+\usepackage{setspace}
+\usepackage{url}
+\usepackage[framemethod=tikz]{mdframed}
+
+\addtokomafont{title}{\Huge\color{green!40!brown!80}} % Titles in custom blue color
+\addtokomafont{chapter}{\color{green!40!brown!80}} % Lab dates in olive green
+\addtokomafont{section}{\color{brown}} % Sections in sepia
+\addtokomafont{pagehead}{\normalfont\sffamily\color{gray}} % Header text in gray and sans serif
+\addtokomafont{caption}{\footnotesize\itshape} % Small italic font size for captions
+\addtokomafont{captionlabel}{\upshape\bfseries} % Bold for caption labels
+\addtokomafont{descriptionlabel}{\rmfamily}
+\setcapwidth[r]{10cm} % Right align caption text
+\setkomafont{footnote}{\sffamily} % Footnotes in sans serif
+
+\deffootnote[4cm]{4cm}{1em}{\textsuperscript{\thefootnotemark}} % Indent footnotes to line up with text
+
+\DeclareFixedFont{\textcap}{T1}{phv}{bx}{n}{1.5cm} % Font for main title: Helvetica 1.5 cm
+\DeclareFixedFont{\textaut}{T1}{phv}{bx}{n}{0.8cm} % Font for author name: Helvetica 0.8 cm
+
+\usepackage[nouppercase,headsepline]{scrpage2} % Provides headers and footers configuration
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+\clearscrheadfoot % Clean old definitions if they exist
+
+\automark[chapter]{chapter}
+\ohead{\headmark} % Prints outer header
+
+\setlength{\headheight}{25pt} % Makes the header take up a bit of extra space for aesthetics
+\setheadsepline{.4pt} % Creates a thin rule under the header
+\addtokomafont{headsepline}{\color{lightgray}} % Colors the rule under the header light gray
+
+\ofoot[\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}]{\normalfont\normalcolor{\thepage\ |\  \pageref{LastPage}}} % Creates an outer footer of: "current page | total pages"
+
+% These lines make it so each new lab day directly follows the previous one i.e. does not start on a new page - comment them out to separate lab days on new pages
+\makeatletter
+\patchcmd{\addchap}{\if@openright\cleardoublepage\else\clearpage\fi}{\par}{}{}
+\makeatother
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+% These lines make it so every figure and equation in the document is numbered consecutively rather than restarting at 1 for each lab day - comment them out to remove this behavior
+\usepackage{chngcntr}
+\counterwithout{figure}{labday}
+\counterwithout{equation}{labday}
+
+% Hyperlink configuration
+\usepackage[
+pdfauthor={}, % Your name for the author field in the PDF
+pdftitle={Laboratory Journal}, % PDF title
+pdfsubject={}, % PDF subject
+bookmarksopen=true,
+linktocpage=true,
+pdfpagelabels=true,
+plainpages=false,
+colorlinks=true, % Turn off all coloring by changing this to false
+bookmarks=true,
+pdfview=FitB]{hyperref}
+
+\usepackage[stretch=10]{microtype} % Slightly tweak font spacing for aesthetics
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DEFINITION OF EXPERIMENTS
+%----------------------------------------------------------------------------------------
+
+% Template: \newexperiment{<abbrev>}[<short form>]{<long form>}
+% <abbrev> is the reference to use later in the .tex file in \experiment{}, the <short form> is only used in the table of contents and running title - it is optional, <long form> is what is printed in the lab book itself
+
+\newexperiment{exp1}[The DataFace Application]{The DataFace Application}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{\textcap{\shadowtext{CS493}\\
+\textaut{\small{Regis University}}	
+\textaut{\small{Senior Capstone}}\\		
+\textaut{\shadowtext{Capstone Product Information}}
+\textaut{\shadowtext{for Stakeholders}}}\\
+}
+
+\author{
+\includegraphics[scale=0.5]{android.png}\\
+\textaut{\small{Intructor: Mr. Allan Rossi}}\\
+\textaut{\small{Author: Mr. Jason N Mansfield}}\\ \\ % Your name
+The Object Based Study Application % Your degree
+}
+\date{\today} % No date by default, add \today if you wish to include the publication date
+
+\maketitle % Title page
+
+\printindex
+\tableofcontents % Table of contents
+\newpage % Start lab look on a new page
+
+
+\pagestyle{scrheadings} % Begin using headers
+
+%----------------------------------------------------------------------------------------
+%	LAB BOOK CONTENTS
+%----------------------------------------------------------------------------------------
+
+\labday{\today}
+%-----------------------------------------
+
+\experiment{exp1}
+\begin{onehalfspace}
+This is a basic guide for retrieving the DataFace application in it current status. Please keep in mind the application is still very much in a beta stage and large portions of it will change over time. Beyond successful development the most important item for you as a StakeHolder is how do you get DataFace and from where.
+\subsection{Get DataFace}
+\end{onehalfspace}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1,
+linecolor=green!40!brown!80,outerlinewidth=.9,
+innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{1.0\textwidth}
+To view the current DataFace project you may download the latest APK to use on your Android based device: \href{https://github.com/trentonknight/DataFaceProject/blob/master/DataFace/build/apk/DataFace-release-unsigned.apk?raw=true}{Dataface-release-unsigned.apk}
+\end{minipage}
+\end{center}
+\end{mdframed}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1,
+linecolor=green!40!brown!80,outerlinewidth=.9,
+innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{1.0\textwidth}
+To view the latest development source code of this product, please take a look at the online GitHub repository: \href{https://github.com/trentonknight/DataFaceProject}{DataFaceProject}
+\end{minipage}
+\end{center}
+\end{mdframed}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1,
+linecolor=green!40!brown!80,outerlinewidth=.9,
+innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{1.0\textwidth}
+To clone this project using git:\\ git~clone~\href{https://github.com/trentonknight/DataFaceProject.git}{https://github.com/trentonknight/DataFaceProject.git}
+\end{minipage}
+\end{center}
+\end{mdframed}
+\begin{mdframed}[roundcorner=10pt,leftmargin=1, rightmargin=1,
+linecolor=green!40!brown!80,outerlinewidth=.9,
+innerleftmargin=8,innertopmargin=8,innerbottommargin=8]
+\begin{center}
+\begin{minipage}[c]{1.0\textwidth}
+To comment or see status updates on this project view the wiki here: \href{https://github.com/trentonknight/DataFaceProject/wiki/DataFace:-An-attempt-to-create-a-Object-based-learning-tool.}{DataFace: An attempt to create a Object based learning tool.}
+\end{minipage}
+\end{center}
+\end{mdframed}
+\begin{onehalfspace}
+	For now DataFace is being distributed as whats referred to as Open Distribution~\citep{Open}. Once the application has reach full maturity and is releasable to the general public it will be licenced and distributed on Google Play~\citep{play}. 
+\subsection{Additional Help}	
+	Additional details may be found in the Handout from our previous \href{http://youtu.be/zNNrX_RKESk}{Google Hangout on Air} meeting here: \href{https://docs.google.com/file/d/0B637cz9R6ttwbC1HaFRQODVpZ1k/edit?usp=sharing}{Presentation of DataFace} as well as a paper I have written regarding its current development \href{https://docs.google.com/file/d/0B637cz9R6ttwT2RVdDNVMjBWZ00/edit?usp=sharing}{Regis University Senior Capstone Scholarship Paper}.
+\end{onehalfspace}
+
+\clearpage
+\printbibliography
+
+\end{document}

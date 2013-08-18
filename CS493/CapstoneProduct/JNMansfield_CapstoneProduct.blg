@@ -1,0 +1,18 @@
+[0] Config.pm:300> INFO - This is Biber 0.9.9
+[1] Config.pm:303> INFO - Logfile is 'JNMansfield_CapstoneProduct.blg'
+[1] biber:145> INFO - === Sun Aug 18, 2013, 12:39:14
+[2] Biber.pm:271> INFO - Reading 'JNMansfield_CapstoneProduct.bcf'
+[13] Biber.pm:586> INFO - Found 2 citekeys in bib section 0
+[21] Biber.pm:2585> INFO - Processing bib section 0
+[35] Biber.pm:2677> INFO - Looking for bibtex format file 'JNMansfield_CapstoneProduct.bib' for section 0
+[36] bibtex.pm:829> INFO - Decoding LaTeX character macros into UTF-8
+[36] bibtex.pm:833> INFO - Finished Decoding LaTeX character macros into UTF-8
+[37] bibtex.pm:704> INFO - Found BibTeX data source 'JNMansfield_CapstoneProduct.bib'
+[51] Utils.pm:168> WARN - Possible typo (case mismatch) between datasource keys: 'ListView' and 'listview' in file 'JNMansfield_CapstoneProduct.bib'
+[74] Biber.pm:2480> INFO - Sorting list 'MAIN' keys
+[74] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[84] Biber.pm:2480> INFO - Sorting list 'SHORTHANDS' keys
+[85] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[87] bbl.pm:427> INFO - Writing 'JNMansfield_CapstoneProduct.bbl' with encoding 'UTF-8'
+[87] bbl.pm:498> INFO - Output to JNMansfield_CapstoneProduct.bbl
+[87] Biber.pm:106> INFO - WARNINGS: 1
